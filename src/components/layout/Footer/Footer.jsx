@@ -1,7 +1,5 @@
 import s from './styles.module.scss';
 
 export const Footer = () => {
-  return (
-    <footer className={s.footer}>Footer</footer>
-  )
-}
+  return <footer className={s.footer}>Footer</footer>;
+};
