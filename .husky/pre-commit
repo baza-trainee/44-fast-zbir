@@ -1,2 +1,1 @@
-pnpm run lint:js:fix
-pnpm run format
+npx lint-staged

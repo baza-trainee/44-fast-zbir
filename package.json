@@ -41,7 +41,8 @@
   "lint-staged": {
     "**/*.{js,jsx}": [
       "prettier --list-different --write",
-      "eslint \"**/*.{js,jsx}\" --fix"
+      "eslint \"**/*.{js,jsx}\" --fix --color",
+      "git add"
     ]
   },
   "browserslist": {
