@@ -1,0 +1,174 @@
+.WhyItMatters {
+    background: linear-gradient(126deg, #1e1e21 0%, #27272d 100%);
+}
+
+.WhyItMatters__container {
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 0 40px 75px;
+}
+
+@media (width >= 1024px) {
+    .WhyItMatters__container {
+      padding: 0 80px 420px;
+    }
+}
+
+@media (width >= 1920px) {
+    .WhyItMatters__container {
+      padding: 0 161px 165px 162px;
+    }
+}
+  
+.WhyItMatters__wrapper {
+    display: grid;
+}
+
+.WhyItMatters__upper {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.08;
+    text-transform: uppercase;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.WhyItMatters__upper h1, .WhyItMatters__upper span {
+    font-family: var(--font-family);
+}
+
+.WhyItMatters__upper h1 {
+    color: #ececec;
+}
+
+.WhyItMatters__upper span {
+    color: #fc0;
+}
+
+.WhyItMatters__upper p {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+.WhyItMatters__glasses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 94px;
+} 
+
+// .WhyItMatters__img {
+//     width: 267px;
+//     height: 266px;
+//     border-radius: 100%;
+//     background-color: #1a1a1d;
+//     border: 1px solid #fc0;
+//     overflow: hidden;
+// }
+
+// .WhyItMatters__img img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: contain;
+// }
+
+.WhyItMatters__text {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.WhyItMatters__dot {
+    display: none;
+}
+
+.WhyItMatters__firstdot {
+    display: none;
+}
+
+.WhyItMatters__antenna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 94px;
+}
+
+.WhyItMatters__happymodel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    margin-bottom: 72px;
+}
+
+.happymodel__text {
+    max-width: 220px;
+}
+
+.WhyItMatters__radiomaster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 72px;
+}
+
+.radiomaster__text {
+    max-width: 160px;
+}
+
+.WhyItMatters__propellers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    margin-bottom: 86px;
+}
+
+.WhyItMatters__lower {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.WhyItMatters__lower p {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fc0;
+}
+
+.join__btn {
+    border-radius: 90px;
+    padding: 10px 20px;
+    width: 312px;
+    height: 70px;
+    min-height: 55px;
+    max-height: 70px;
+    background: #fc0;
+    border: none;
+}
+
+.join__btn:hover {
+    background: #fff2bd;
+}
+
+.join__btn:hover:active {
+    box-shadow: inset 0 4px 10px 0 rgb(0 0 0 / 0.25%);
+    background: #f4f4f4;
+}
+
