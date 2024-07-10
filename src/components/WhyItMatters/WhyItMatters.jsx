@@ -71,7 +71,7 @@ export const WhyItMatters = () => {
               Кожна гривня рятує найцінніше -<br /> життя військових.
             </p>
             <button className={s.join__btn} type="button">
-              <p>ХОЧУ ДОЄДНАТИСЬ</p>
+              ХОЧУ ДОЄДНАТИСЬ
             </button>
           </div>
         </div>
