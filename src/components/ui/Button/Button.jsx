@@ -9,7 +9,8 @@ export const Button = ({
   icon,
   onClick,
   type,
-  className
+  className,
+  iconImage
 }) => {
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
@@ -33,6 +34,7 @@ export const Button = ({
   const buttonText = active ? activeText : hovered ? hoverText : text;
 
   const buttonClass = `${s.button} ${s[type]} ${className}`;
+  const iconClass = `${s.icon} ${s[iconImage]}`;
 
   return (
     <button
@@ -44,7 +46,7 @@ export const Button = ({
       onClick={onClick}
     >
       <span className={s.text}>{buttonText}</span>
-      <span className={s.icon}>{icon}</span>
+      <span className={iconClass}>{icon}</span>
     </button>
   );
 };
@@ -56,7 +58,8 @@ Button.propTypes = {
   icon: PropTypes.element.isRequired,
   onClick: PropTypes.func.isRequired,
   type: PropTypes.oneOf(['join', 'share', 'toMain']).isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  iconImage: PropTypes.oneOf(['planeIcon', 'shareIcon'])
 };
 
 Button.defaultProps = {
