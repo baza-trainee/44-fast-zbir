@@ -1,0 +1,79 @@
+.button {
+    display: inline-block;
+    cursor: pointer;
+    background: #fc0;
+    color: #000;
+    border: none;
+    border-radius: 90px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: #fff2bd;
+      }
+    
+    &:active {
+    box-shadow: inset 0 4px 10px 0 rgb(0 0 0 / 0.25%);
+    background: #f4f4f4;
+    }
+}
+
+.join, .share {
+    padding: 10px 20px;
+    width: 313px;
+    height: 70px;
+}
+
+.toMain {
+    padding: 10px 20px;
+    width: 250px;
+    height: 45px;
+}
+
+@media (width >= 1024px) {
+    .join {
+        padding: 30px 70px;
+        width: 795px;
+        height: 100px;
+    }
+
+    .share {
+        padding: 30px 50px;
+        width: 465px;
+        height: 100px;
+    }
+
+    .toMain {
+        padding: 30px 70px;
+        width: 413px;
+        height: 70px
+    }
+}
+
+@media (width >= 1920px) {
+    .join, .toMain {
+        height: 103px;
+        width: 465px;
+    }
+
+    .share {
+        height: 100px;
+        width: 465px;
+    }
+}
+
+// -------------------------------------------
+.text {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 31px; 
+    height: 36px; 
+    transition: all 0.3s ease;
+    left: 184px;
+    top: 50%;
+    transform: translateY(-50%);
+}

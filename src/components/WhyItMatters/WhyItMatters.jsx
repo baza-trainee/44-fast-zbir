@@ -1,11 +1,18 @@
 import s from './styles.module.scss';
-import glasses from '../../assets/imageswhyitmatters/glasses.png';
-import antenna from '../../assets/imageswhyitmatters/antenna.png';
-import happymodel from '../../assets/imageswhyitmatters/happymodel.png';
-import radiomaster from '../../assets/imageswhyitmatters/radiomaster.png';
-import propellers from '../../assets/imageswhyitmatters/propellers.png';
+import glasses from '../../assets/imagesWhyItMatters/glasses.png';
+import antenna from '../../assets/imagesWhyItMatters/antenna.png';
+import happymodel from '../../assets/imagesWhyItMatters/happymodel.png';
+import radiomaster from '../../assets/imagesWhyItMatters/radiomaster.png';
+import propellers from '../../assets/imagesWhyItMatters/propellers.png';
+import Button from '../ui/Button/Button';
+import plane from '../../assets/imagesWhyItMatters/plane.svg';
+import share from '../../assets/imagesWhyItMatters/share.svg';
 
 export const WhyItMatters = () => {
+  const handleClick = () => {
+    window.location.href = 'https://www.example.com'; // замінити на потрібне посилання
+  };
+
   return (
     <section className={s.WhyItMatters}>
       <div className={s.WhyItMatters__container}>
@@ -70,9 +77,30 @@ export const WhyItMatters = () => {
             <p>
               Кожна гривня рятує найцінніше -<br /> життя військових.
             </p>
-            <button className={s.join__btn} type="button">
-              ХОЧУ ДОЄДНАТИСЬ
-            </button>
+            <Button
+              text="ХОЧУ ДОЄДНАТИСЬ"
+              hoverText="ЛЕТИТЬ МІЙ ДОНАТ"
+              activeText="ЛЕТИТЬ МІЙ ДОНАТ"
+              icon={<img src={plane} alt="Plane" />}
+              onClick={handleClick}
+              type="join"
+            />
+            <Button
+              text="Поділитись"
+              hoverText="Поділитись"
+              activeText="Поділитись"
+              icon={<img src={share} alt="Share" />}
+              onClick={handleClick}
+              type="share"
+            />
+            <Button
+              text="НА ГОЛОВНУ"
+              hoverText="НА ГОЛОВНУ"
+              activeText="НА ГОЛОВНУ"
+              icon={<img src={plane} alt="Plane" />}
+              onClick={handleClick}
+              type="toMain"
+            />
           </div>
         </div>
       </div>
