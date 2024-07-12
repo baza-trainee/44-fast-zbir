@@ -17,14 +17,14 @@ export const WhyItMatters = () => {
       <div className={s.WhyItMatters__container}>
         <div className={s.WhyItMatters__wrapper}>
           <div className={s.WhyItMatters__upper}>
-            <h1>
+            <h2 className={s.upper_title}>
               Чому це
               <br />
               <span>важливо?</span>
-            </h1>
+            </h2>
             <p>
               Докупівля обладнання із переліку дозволить бригаді проводити
-              розвідку, коригувати вогонь, наводити на цілі, рятувати поранених.{' '}
+              розвідку, коригувати вогонь, наводити на цілі, рятувати поранених.
             </p>
           </div>
           <div className={s.WhyItMatters__glasses}>
@@ -78,9 +78,9 @@ export const WhyItMatters = () => {
             </p>
             <Button
               className={s.join_btn}
-              text="ХОЧУ ДОЄДНАТИСЬ"
-              hoverText="ЛЕТИТЬ МІЙ ДОНАТ"
-              activeText="ЛЕТИТЬ МІЙ ДОНАТ"
+              text="Хочу доєднатись"
+              hoverText="Летить мій донат"
+              activeText="Летить мій донат"
               icon={<img src={plane} alt="Plane" />}
               onClick={handleClick}
               type="join"

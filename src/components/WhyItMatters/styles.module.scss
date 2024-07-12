@@ -30,27 +30,30 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 1.08;
-    text-transform: uppercase;
     gap: 50px;
     margin-bottom: 50px;
 }
 
-.WhyItMatters__upper h1, .WhyItMatters__upper span {
+.upper_title {
     font-family: var(--font-family);
-}
-
-.WhyItMatters__upper h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.08;
+    text-transform: uppercase;
     color: #ececec;
 }
 
-.WhyItMatters__upper span {
+.upper_title > span {
     color: #fc0;
 }
 
-.WhyItMatters__upper p {
+.WhyItMatters__upper p, .WhyItMatters__lower p {
     font-family: var(--second-family);
+    font-size: 16px; 
+}
+
+.WhyItMatters__upper p {
     font-weight: 400;
-    font-size: 16px;
     color: #f4f4f4;
 }
 
@@ -80,7 +83,8 @@
 
 .WhyItMatters__text {
     font-family: var(--font-family);
-    font-weight: 700;
+
+    // font-weight: 700;
     font-size: 16px;
     text-align: center;
     color: #f4f4f4;
@@ -145,9 +149,7 @@
 }
 
 .WhyItMatters__lower p {
-    font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
     text-align: center;
     color: #fc0;
 }
