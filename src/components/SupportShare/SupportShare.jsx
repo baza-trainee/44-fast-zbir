@@ -7,7 +7,9 @@ export const SupportShare = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <section className={s.SupportShare}>
@@ -18,6 +20,7 @@ export const SupportShare = () => {
       </h2>
       {/* <Button variant="share" label="Поділитися" /> */}
       <button onClick={openModal}> поділитись </button>
+
       {isModalOpen && <ModalShare onClose={closeModal} />}
     </section>
   );

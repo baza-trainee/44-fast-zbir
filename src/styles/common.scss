@@ -2,6 +2,11 @@
   --font-family: 'Open Sans Condensed', sans-serif;
   --second-family: 'Open Sans', sans-serif;
 }
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 
 body {
   background: linear-gradient(
