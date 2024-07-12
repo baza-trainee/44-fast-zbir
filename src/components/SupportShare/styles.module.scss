@@ -1,0 +1,62 @@
+@import '../../styles/common';
+
+.SupportShare {
+  font-family: var(--font-family);
+  color: rgb(244 244 244);
+  padding: 75px 20px 70px;
+
+  @media screen and (width >= 1024px) {
+    padding: 150px 20px 120px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49px;
+    width: 350px;
+    position: relative;
+    margin: 0 auto 45px;
+
+    &::after {
+      content: '';
+      background-image: url('../../assets/socialIcons/vector.svg');
+      position: absolute;
+      width: 109px;
+      height: 141px;
+      top: 35%;
+      background-repeat: no-repeat;
+    }
+
+    span {
+      display: inline-block;
+      color: #fc0;
+      width: 350px;
+    }
+
+    @media screen and (width >= 1024px) {
+      font-size: 64px;
+      line-height: 87px;
+      margin-left: 0;
+      width: 532px;
+
+      span {
+        width: 622px;
+      }
+
+      &::after {
+        content: '';
+        background-image: url('../../assets/socialIcons/vectortab.svg');
+        width: 346px;
+        height: 161px;
+        left: 13%;
+        transform: translateY(90%);
+      }
+    }
+
+    @media screen and (width >= 1920px) {
+      font-size: 96px;
+      line-height: 131px;
+    }
+  }
+}

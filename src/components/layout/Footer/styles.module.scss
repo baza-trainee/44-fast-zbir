@@ -1,0 +1,22 @@
+@import '../../../styles/common';
+
+.footer {
+  font-family: var(--second-family);
+  color: rgb(244 244 244);
+
+  p {
+    padding: 10px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    margin-bottom: 73px;
+  }
+
+  @media screen and (width <= 1024px) {
+    p {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 83px;
+    }
+  }
+}
