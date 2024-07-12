@@ -5,8 +5,7 @@ import happymodel from '../../assets/imagesWhyItMatters/happymodel.png';
 import radiomaster from '../../assets/imagesWhyItMatters/radiomaster.png';
 import propellers from '../../assets/imagesWhyItMatters/propellers.png';
 import Button from '../ui/Button/Button';
-import plane from '../../assets/imagesWhyItMatters/plane.svg';
-import share from '../../assets/imagesWhyItMatters/share.svg';
+import plane from '../../assets/buttonIcons/plane.svg';
 
 export const WhyItMatters = () => {
   const handleClick = () => {
@@ -78,28 +77,13 @@ export const WhyItMatters = () => {
               Кожна гривня рятує найцінніше -<br /> життя військових.
             </p>
             <Button
+              className={s.join_btn}
               text="ХОЧУ ДОЄДНАТИСЬ"
               hoverText="ЛЕТИТЬ МІЙ ДОНАТ"
               activeText="ЛЕТИТЬ МІЙ ДОНАТ"
               icon={<img src={plane} alt="Plane" />}
               onClick={handleClick}
               type="join"
-            />
-            <Button
-              text="Поділитись"
-              hoverText="Поділитись"
-              activeText="Поділитись"
-              icon={<img src={share} alt="Share" />}
-              onClick={handleClick}
-              type="share"
-            />
-            <Button
-              text="НА ГОЛОВНУ"
-              hoverText="НА ГОЛОВНУ"
-              activeText="НА ГОЛОВНУ"
-              icon={<img src={plane} alt="Plane" />}
-              onClick={handleClick}
-              type="toMain"
             />
           </div>
         </div>

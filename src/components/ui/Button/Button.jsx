@@ -7,10 +7,10 @@ export const Button = ({
   hoverText,
   activeText,
   icon,
+  iconImage,
   onClick,
   type,
-  className,
-  iconImage
+  className = ''
 }) => {
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
@@ -56,14 +56,10 @@ Button.propTypes = {
   hoverText: PropTypes.string.isRequired,
   activeText: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
+  iconImage: PropTypes.oneOf(['planeIcon', 'shareIcon']),
   onClick: PropTypes.func.isRequired,
   type: PropTypes.oneOf(['join', 'share', 'toMain']).isRequired,
-  className: PropTypes.string,
-  iconImage: PropTypes.oneOf(['planeIcon', 'shareIcon'])
-};
-
-Button.defaultProps = {
-  className: ''
+  className: PropTypes.string
 };
 
 export default Button;

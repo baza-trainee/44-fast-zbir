@@ -1,7 +1,6 @@
 .button {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start; 
     cursor: pointer;
     background: #fc0;
     color: #000;
@@ -20,74 +19,145 @@
 }
 
 .icon {
-    transition: margin-left 0.3s ease; 
+    margin-left: 10px;
+    transition: margin-left 2s ease;
     align-self: center;
 }
 
-.button:hover .icon {
-    margin-left: 45px;
+// Type join -------------------------------
+.join {
+    width: 313px;
+    height: 70px;
+    padding: 10px 20px;
 }
 
 .planeIcon {
-    width: 31px; 
-    height: 36px;
-    margin-left: 10px; 
+    width: 31px;
+    height: 35px;
 }
 
-.shareIcon {
-    width: 26px; 
-    height: 28px;
-    margin-left: 10px; 
-}
-
-.join, .share {
-    padding: 10px 20px;
-    width: 313px;
-    height: 70px;
-}
-
-.toMain {
-    padding: 10px 20px;
-    width: 250px;
-    height: 45px;
+.button.join:hover .icon {
+    margin-left: 86px;
 }
 
 @media (width >= 1024px) {
     .join {
-        padding: 30px 70px;
         width: 795px;
         height: 100px;
-    }
-
-    .share {
-        padding: 30px 50px;
-        width: 465px;
-        height: 100px;
-    }
-
-    .toMain {
         padding: 30px 70px;
-        width: 413px;
-        height: 70px
+    }
+
+    .button.join:hover .icon {
+        margin-left: 469px;
     }
 }
 
 @media (width >= 1920px) {
-    .join, .toMain {
+    .join {
         height: 103px;
         width: 465px;
+        padding: 33px 38px;
     }
 
-    .share {
-        height: 100px;
-        width: 465px;
+    .button.join:hover .icon {
+        margin-left: 174px;
     }
 }
 
-// -------------------------------------------
+// Type share -------------------------------------------
+.share {
+    width: 313px;
+    height: 70px;
+    padding: 10px 20px;
+}
+
+.shareIcon {
+    width: 26px; 
+    height: 28px; 
+}
+
+.button.share:hover .icon {
+    margin-left: 141px;
+}
+
+@media (width >= 1024px)  {
+    .share {
+        width: 465px;
+        height: 100px;
+        padding: 30px 50px;
+    }
+
+    .button.share .icon {
+        margin-left: 20px;
+    }
+
+    .button.share:hover .icon {
+        margin-left: 233px;
+    }
+}
+
+@media (width >= 1920px) {
+    .share {
+        width: 465px;
+        height: 100px;
+        padding: 33px 50px;
+    }
+
+    .button.share:hover .icon {
+        margin-left: 212px;
+    }
+}
+
+// Type toMain ------------------------------------------
+.toMain {
+    width: 250px;
+    height: 45px;
+    padding: 10px 20px;
+}
+
+.button.toMain:hover .icon {
+    margin-left: 78px;
+}
+
+@media (width >= 1024px) {
+    .toMain {
+        width: 414px;
+        height: 70px;
+        padding: 30px 70px;
+    }
+
+    .button.toMain .icon {
+        margin-left: 20px;
+    }
+
+    .button.toMain:hover .icon {
+        margin-left: 142px;
+    }
+}
+
+@media (width >= 1920px) {
+    .toMain {
+        width: 466px;
+        height: 103px;
+        padding: 35px 38px;
+    }
+
+    .button.toMain:hover .icon {
+        margin-left: 236px;
+    }
+}
+
+// Text -------------------------------------------------
 .text {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
+    text-align: left;
+}
+
+@media (width >= 1920px) {
+    .text {
+        font-size: 24px;
+    }
 }
