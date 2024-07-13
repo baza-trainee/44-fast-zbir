@@ -1,0 +1,28 @@
+.ScrollBtn {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    width: 26px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color:transparent;
+    border:none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    
+
+    &.animate {
+      animation: bounce 0.5s;
+    }
+}
+@media (min-width: 767.98px) {
+    .ScrollBtn {
+        bottom: 90px;
+        right: 70px;
+        width: 26px;
+        height: 22px;
+    }
+}
