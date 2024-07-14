@@ -4,7 +4,7 @@ export const ThankYouModal = () => {
   return (
     <div className={s.overlay}>
       <div className={s.modal}>
-        <h1 className={s.header}>ДЯКУЄМО ЗА ТВІЙ ДОНАТ!</h1>
+        <div className={s.header}>ДЯКУЄМО ЗА ТВІЙ ДОНАТ!</div>
         <div className={s.icon}>
           <svg
             viewBox="0 0 150 150"
