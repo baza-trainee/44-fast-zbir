@@ -6,17 +6,13 @@
   font-size: 24px;
   color: #f4f4f4;
   padding: 65px 0 93px;
-}
 
-@media (width >= 1024px) {
-  .aboutbrigade {
-    padding: 113px 0 151px;
+  @media (width >= 1024px) {
+      padding: 113px 0 151px;
   }
-}
 
-@media (width >= 1920px) {
-  .aboutbrigade {
-    padding: 132px 0 200px;
+  @media (width >= 1920px) {
+      padding: 132px 0 200px;
   }
 }
 
@@ -24,11 +20,13 @@
   max-width: 1596px;
   padding: 0 40px;
   margin: 0 auto;
-}
 
-@media (width >= 1024px) {
-  .container {
-    padding: 0 80px;
+  @media (width >= 1024px) {
+      padding: 0 80px;
+  }
+
+  @media (width >= 1920px) {
+    padding: 0;
   }
 }
 
@@ -36,12 +34,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-}
 
-@media (width >= 1024px) {
-  .heading_wrapper {
-    margin-bottom: 50px;
-    align-items: center;
+  @media (width >= 1024px) {
+      margin-bottom: 50px;
+      align-items: center;
   }
 }
 
@@ -52,20 +48,16 @@
   line-height: 108%;
   text-transform: uppercase;
   color: #ececec;
-}
+  font-stretch: condensed;
 
-@media (width >= 1024px) {
-  .heading {
-    font-size: 96px;
-    width: 515px;
-    line-height: 108%;
+  @media (width >= 1024px) {
+      font-size: 96px;
+      width: 515px;
   }
-}
 
-@media (width >= 1920px) {
-  .heading {
-    font-size: 128px;
-    width: 686px;
+  @media (width >= 1920px) {
+      font-size: 128px;
+      width: 686px;
   }
 }
 
@@ -76,18 +68,14 @@
 .heading_img img {
   width: 80px;
   margin-right: 1px;
-}
 
-@media (width >= 1024px) {
-  .heading_img img {
-    width: 200px;
-    margin-right: 6px;
+  @media (width >= 1024px) {
+      width: 200px;
+      margin-right: 6px;
   }
-}
-
-@media (width >= 1920px) {
-  .heading_img {
-    display: none;
+  
+  @media (width >= 1920px) {
+      display: none;
   }
 }
 
@@ -97,18 +85,14 @@
   font-size: 16px;
   color: #f4f4f4;
   line-height: 1.38;
-}
 
-@media (width >= 1024px) {
-  .description {
-    font-size: 24px;
+  @media (width >= 1024px) {
+      font-size: 24px;
   }
-}
-
-@media (width >= 1920px) {
-  .description {
-    font-size: 24px;
-    width: 785px;
+  
+  @media (width >= 1920px) {
+      font-size: 24px;
+      width: 785px;
   }
 }
 
@@ -119,10 +103,8 @@
 
 .image_big {
   display: none;
-}
 
-@media (width >= 1920px) {
-  .image_big {
-    display: block;
+  @media (width >= 1920px) {
+      display: block;
   }
 }
