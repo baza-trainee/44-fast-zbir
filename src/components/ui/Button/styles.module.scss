@@ -1,163 +1,163 @@
 .button {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  background: #fc0;
-  color: #000;
-  border: none;
-  border-radius: 90px;
-  transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    background: #fc0;
+    color: #000;
+    border: none;
+    border-radius: 90px;
+    transition: all 0.3s ease;
 
-  &:hover {
-    background: #fff2bd;
-  }
-
-  &:active {
+    &:hover {
+        background: #fff2bd;
+      }
+    
+    &:active {
     box-shadow: inset 0 4px 10px 0 rgb(0 0 0 / 0.25%);
     background: #f4f4f4;
-  }
+    }
 }
 
 .icon {
-  margin-left: 10px;
-  transition: margin-left 2s ease;
-  align-self: center;
+    margin-left: 10px;
+    transition: margin-left 2s ease;
+    align-self: center;
 }
 
 // Type join -------------------------------
 .join {
-  width: 313px;
-  height: 70px;
-  padding: 10px 20px;
+    width: 313px;
+    height: 70px;
+    padding: 10px 20px;
 }
 
 .planeIcon {
-  width: 31px;
-  height: 35px;
+    width: 31px;
+    height: 35px;
 }
 
 .button.join:hover .icon {
-  margin-left: 86px;
+    margin-left: 86px;
 }
 
 @media (width >= 1024px) {
-  .join {
-    width: 795px;
-    height: 100px;
-    padding: 30px 70px;
-  }
+    .join {
+        width: 795px;
+        height: 100px;
+        padding: 30px 70px;
+    }
 
-  .button.join:hover .icon {
-    margin-left: 469px;
-  }
+    .button.join:hover .icon {
+        margin-left: 469px;
+    }
 }
 
 @media (width >= 1920px) {
-  .join {
-    height: 103px;
-    width: 465px;
-    padding: 33px 38px;
-  }
+    .join {
+        height: 103px;
+        width: 465px;
+        padding: 33px 38px;
+    }
 
-  .button.join:hover .icon {
-    margin-left: 174px;
-  }
+    .button.join:hover .icon {
+        margin-left: 174px;
+    }
 }
 
 // Type share -------------------------------------------
 .share {
-  width: 313px;
-  height: 70px;
-  padding: 10px 20px;
+    width: 313px;
+    height: 70px;
+    padding: 10px 20px;
 }
 
 .shareIcon {
-  width: 26px;
-  height: 28px;
+    width: 26px; 
+    height: 28px; 
 }
 
 .button.share:hover .icon {
-  margin-left: 131px;
+    margin-left: 141px;
 }
 
-@media (width >= 1024px) {
-  .share {
-    width: 465px;
-    height: 100px;
-    padding: 30px 50px;
-  }
+@media (width >= 1024px)  {
+    .share {
+        width: 465px;
+        height: 100px;
+        padding: 30px 50px;
+    }
 
-  .button.share .icon {
-    margin-left: 20px;
-  }
+    .button.share .icon {
+        margin-left: 20px;
+    }
 
-  .button.share:hover .icon {
-    margin-left: 233px;
-  }
+    .button.share:hover .icon {
+        margin-left: 233px;
+    }
 }
 
 @media (width >= 1920px) {
-  .share {
-    width: 465px;
-    height: 100px;
-    padding: 33px 50px;
-  }
+    .share {
+        width: 465px;
+        height: 100px;
+        padding: 33px 50px;
+    }
 
-  .button.share:hover .icon {
-    margin-left: 212px;
-  }
+    .button.share:hover .icon {
+        margin-left: 212px;
+    }
 }
 
 // Type toMain ------------------------------------------
 .toMain {
-  width: 250px;
-  height: 45px;
-  padding: 10px 20px;
+    width: 250px;
+    height: 45px;
+    padding: 10px 20px;
 }
 
 .button.toMain:hover .icon {
-  margin-left: 78px;
+    margin-left: 78px;
 }
 
 @media (width >= 1024px) {
-  .toMain {
-    width: 414px;
-    height: 70px;
-    padding: 30px 70px;
-  }
+    .toMain {
+        width: 414px;
+        height: 70px;
+        padding: 30px 70px;
+    }
 
-  .button.toMain .icon {
-    margin-left: 20px;
-  }
+    .button.toMain .icon {
+        margin-left: 20px;
+    }
 
-  .button.toMain:hover .icon {
-    margin-left: 142px;
-  }
+    .button.toMain:hover .icon {
+        margin-left: 142px;
+    }
 }
 
 @media (width >= 1920px) {
-  .toMain {
-    width: 466px;
-    height: 103px;
-    padding: 35px 38px;
-  }
+    .toMain {
+        width: 466px;
+        height: 103px;
+        padding: 35px 38px;
+    }
 
-  .button.toMain:hover .icon {
-    margin-left: 236px;
-  }
+    .button.toMain:hover .icon {
+        margin-left: 236px;
+    }
 }
 
 // Text -------------------------------------------------
 .text {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 @media (width >= 1920px) {
-  .text {
-    font-size: 24px;
-  }
+    .text {
+        font-size: 24px;
+    }
 }
