@@ -1,5 +1,5 @@
 import s from './styles.module.scss';
-import chevron from '../../assets/images/44th.separate.big.svg';
+import chevron from '../../assets/imagesAboutBrigade/44th.separate.big.svg';
 
 export const AboutBrigade = () => {
   return <section className={s.aboutbrigade}>
