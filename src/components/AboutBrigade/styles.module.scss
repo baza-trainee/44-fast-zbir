@@ -1,3 +1,110 @@
 .aboutbrigade {
   width: 100%;
+  background: linear-gradient(126deg, #1e1e21 0%, #27272d 100%);
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  color: #f4f4f4;
+  padding: 65px 0 93px;
+
+  @media (width >= 1024px) {
+      padding: 113px 0 151px;
+  }
+
+  @media (width >= 1920px) {
+      padding: 132px 0 200px;
+  }
+}
+
+.container {
+  max-width: 1596px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @media (width >= 1024px) {
+      padding: 0 80px;
+  }
+
+  @media (width >= 1920px) {
+    padding: 0;
+  }
+}
+
+.heading_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @media (width >= 1024px) {
+      margin-bottom: 50px;
+      align-items: center;
+  }
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 108%;
+  text-transform: uppercase;
+  color: #ececec;
+  font-stretch: condensed;
+
+  @media (width >= 1024px) {
+      font-size: 96px;
+      width: 515px;
+  }
+
+  @media (width >= 1920px) {
+      font-size: 128px;
+      width: 686px;
+  }
+}
+
+.heading span {
+  color: #fc0;
+}
+
+.heading_img img {
+  width: 80px;
+  margin-right: 1px;
+
+  @media (width >= 1024px) {
+      width: 200px;
+      margin-right: 6px;
+  }
+  
+  @media (width >= 1920px) {
+      display: none;
+  }
+}
+
+.description {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #f4f4f4;
+  line-height: 1.38;
+
+  @media (width >= 1024px) {
+      font-size: 24px;
+  }
+  
+  @media (width >= 1920px) {
+      font-size: 24px;
+      width: 785px;
+  }
+}
+
+.flex_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image_big {
+  display: none;
+
+  @media (width >= 1920px) {
+      display: block;
+  }
 }
