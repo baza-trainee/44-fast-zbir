@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import s from './styles.module.scss';
 import glasses from '../../assets/imageswhyitmatters/glasses.png';
 import antenna from '../../assets/imageswhyitmatters/antenna.png';
@@ -6,10 +7,17 @@ import radiomaster from '../../assets/imageswhyitmatters/radiomaster.png';
 import propellers from '../../assets/imageswhyitmatters/propellers.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
+import ThankYouModal from '../ThankYouModal/ThankYouModal';
 
 export const WhyItMatters = () => {
-  const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // замінити на потрібне посилання
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -24,7 +32,7 @@ export const WhyItMatters = () => {
             </h1>
             <p>
               Докупівля обладнання із переліку дозволить бригаді проводити
-              розвідку, коригувати вогонь, наводити на цілі, рятувати поранених.{' '}
+              розвідку, коригувати вогонь, наводити на цілі, рятувати поранених.
             </p>
           </div>
           <div className={s.WhyItMatters__glasses}>
@@ -82,12 +90,13 @@ export const WhyItMatters = () => {
               hoverText="ЛЕТИТЬ МІЙ ДОНАТ"
               activeText="ЛЕТИТЬ МІЙ ДОНАТ"
               icon={<img src={plane} alt="Plane" />}
-              onClick={handleClick}
+              onClick={handleButtonClick}
               type="join"
             />
           </div>
         </div>
       </div>
+      {isModalOpen && <ThankYouModal onClose={handleCloseModal} />}
     </section>
   );
 };
