@@ -1,9 +1,9 @@
 import s from './styles.module.scss';
-import glasses from '../../assets/imageswhyitmatters/glasses.png';
-import antenna from '../../assets/imageswhyitmatters/antenna.png';
-import happymodel from '../../assets/imageswhyitmatters/happymodel.png';
-import radiomaster from '../../assets/imageswhyitmatters/radiomaster.png';
-import propellers from '../../assets/imageswhyitmatters/propellers.png';
+import glasses from '../../assets/imagesWhyItMatters/glasses.png';
+import antenna from '../../assets/imagesWhyItMatters/antenna.png';
+import happymodel from '../../assets/imagesWhyItMatters/happymodel.png';
+import radiomaster from '../../assets/imagesWhyItMatters/radiomaster.png';
+import propellers from '../../assets/imagesWhyItMatters/propellers.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
 
@@ -34,18 +34,20 @@ export const WhyItMatters = () => {
               <div className={s.WhyItMatters__img}>
                 <img src={glasses} alt="Glasses" />
               </div>
-              <p className={s.WhyItMatters__text}>
+              <p className={`${s.WhyItMatters__text} ${s.glasses__text}`}>
                 Окуляри FPV Skyzone SKY04X PRO
               </p>
             </div>
           </div>
 
-          <div className={s.WhyItMatters__dot_container}>
+          <div
+            className={`${s.WhyItMatters__dot_container} ${s.WhyItMatters__dot_container_up}`}
+          >
             <div className={s.WhyItMatters__antenna}>
               <div className={s.WhyItMatters__img}>
                 <img src={antenna} alt="Antenna" />
               </div>
-              <p className={s.WhyItMatters__text}>
+              <p className={`${s.WhyItMatters__text} ${s.antenna__text}`}>
                 FPV-антена Maple Wireless 5.8G
               </p>
             </div>
@@ -59,7 +61,9 @@ export const WhyItMatters = () => {
             </div>
           </div>
 
-          <div className={s.WhyItMatters__dot_container}>
+          <div
+            className={`${s.WhyItMatters__dot_container} ${s.WhyItMatters__dot_container_down}`}
+          >
             <div className={s.WhyItMatters__radiomaster}>
               <div className={s.WhyItMatters__img}>
                 <img src={radiomaster} alt="Radiomaster" />

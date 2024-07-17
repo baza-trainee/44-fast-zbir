@@ -43,7 +43,6 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 33px;
     }
 }
 
@@ -59,6 +58,7 @@
     @media (width >= 1024px) {
         width: 482px;
         gap: 36px;
+        margin-bottom: 33px;
     }
 }
 
@@ -101,10 +101,20 @@
     gap: 27px;
     margin-bottom: 94px;
 
+    @media (width >= 1024px) {
+        margin-bottom: 50px;
+    }
+
     @media (width >= 1920px) {
         z-index: 2;
     }
 } 
+
+.glasses__text {
+    @media (width >= 1024px) {
+        width: 276px;
+    }
+}
 
 .WhyItMatters__img {
     width: 267px;
@@ -121,11 +131,13 @@
 
 .WhyItMatters__text {
     font-family: var(--font-family);
-
-    // font-weight: 700;
     font-size: 16px;
     text-align: center;
     color: #f4f4f4;
+
+    @media (width >= 1024px) {
+        font-size: 24px;
+    }
 }
 
 .WhyItMatters__dot_container {
@@ -137,12 +149,11 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 50px;
         position: relative; 
     }
 }
 
-.WhyItMatters__dot_container::before {
+.WhyItMatters__dot_container_up::before {
     display: none;
 
     @media (width >= 1024px) {
@@ -160,6 +171,30 @@
     }
 }
 
+.WhyItMatters__dot_container_down::before {
+    display: none;
+
+    @media (width >= 1024px) {
+        display: initial;
+        content: '';
+        position: absolute;
+        top: 39%; 
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-image: var(--dot-line);
+        background-position: center;
+        background-repeat: repeat-x;
+        z-index: 1;
+    }
+}
+
+.WhyItMatters__dot_container_down {
+    @media (width >= 1024px) {
+        margin-bottom: 60px;
+    }
+}
+
 .WhyItMatters__antenna {
     display: flex;
     flex-direction: column;
@@ -168,6 +203,16 @@
     gap: 27px;
     margin-bottom: 94px;
     z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 50px;
+    }
+}
+
+.antenna__text {
+    @media (width >= 1024px) {
+        width: 266px;
+    }
 }
 
 .WhyItMatters__happymodel {
@@ -175,13 +220,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 34px;
+    gap: 27px;
     margin-bottom: 72px;
     z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 50px;
+    }
 }
 
 .happymodel__text {
-    max-width: 220px;
+    width: 220px;
+
+    @media (width >= 1024px) {
+        width: 266px;
+    }
 }
 
 .WhyItMatters__radiomaster {
@@ -192,10 +245,18 @@
     gap: 27px;
     margin-bottom: 72px;
     z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 0;
+    }
 }
 
 .radiomaster__text {
-    max-width: 160px;
+    width: 160px;
+
+    @media (width >= 1024px) {
+        width: 240px;
+    }
 }
 
 .WhyItMatters__propellers {
@@ -203,12 +264,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 34px;
+    gap: 27px;
     margin-bottom: 86px;
     z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 0;
+    }
 }
 
 .propellers__text {
+    width: 290px;
+
     @media (width >= 1024px) {
         width: 266px;
     }
@@ -218,6 +285,10 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    @media (width >= 1024px) {
+        gap: 60px;
+    }
 }
 
 .WhyItMatters__lower p {
