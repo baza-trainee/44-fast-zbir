@@ -15,6 +15,7 @@
 }
 
 .modal {
+  position: relative;
   width: 341px;
   height: 336px;
   text-align: center;
@@ -25,17 +26,37 @@
   overflow: hidden;
 }
 
+.closeButton {
+  position: absolute;
+  top: 27px;
+  right: 23px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 .header {
   font-family: 'Open Sans Condensed', sans-serif;
   line-height: 1.079;
   font-weight: bold;
   font-size: 20px;
+  margin-top: 55px;
   white-space: nowrap;
   text-align: center;
+  color: #232227;
+
+  .highlight {
+    color: #fc0;
+  }
 }
 
 .icon {
-  padding-top: 15px;
+  margin-top: 15px;
 
   img {
     width: 34px;
@@ -46,9 +67,11 @@
 .description {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
-  line-height: 11.61px;
+  font-weight: regular;
+  line-height: 1.079;
   letter-spacing: 0;
-  padding: 15px 52px;
+  padding: 15px 52px 0;
+  color: #000;
 }
 
 .subtitle {
@@ -56,32 +79,42 @@
   font-weight: bold;
   line-height: 1.079;
   font-size: 14px;
-  padding: 15px 0;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  color: #232227;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }
 
 @media (width >= 1024px) {
   .modal {
     width: 660px;
     height: 498px;
-    box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 10px;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  }
+
+  .closeButton {
+    top: 20px;
+    right: 18px;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
     font-size: 40px;
-    line-height: 1.079;
-    letter-spacing: 0;
-    text-align: center;
+    margin-top: 50px;
   }
 
   .icon {
-    padding-top: 25px;
+    margin-top: 25px;
 
     img {
       width: 76px;
@@ -90,14 +123,17 @@
   }
 
   .description {
-    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: normal;
     letter-spacing: normal;
     line-height: 32px;
+    padding: 25px 121px 0;
   }
 
   .subtitle {
+    font-size: 32px;
+    margin-top: 25px;
+    margin-bottom: 45px;
   }
 }
 
@@ -107,25 +143,42 @@
     height: 660px;
   }
 
+  .closeButton {
+    top: 28px;
+    right: 42px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
   .header {
-    font-size: 2em;
+    font-size: 54px;
+    margin-top: 58px;
+
+    .highlight {
+      color: #fc0;
+    }
   }
 
   .icon {
-    margin: 30px 0;
+    margin-top: 53px;
 
     img {
-      width: 10%;
-      height: auto;
+      width: 90px;
+      height: 90px;
     }
   }
 
   .description {
-    font-size: 1.2em;
+    font-size: 24px;
+    padding: 41px 143px 0;
   }
 
   .subtitle {
-    font-size: 1.5em;
-    margin: 30px 0;
+    font-size: 36px;
+    margin-top: 47px;
+    margin-bottom: 47px;
   }
 }
