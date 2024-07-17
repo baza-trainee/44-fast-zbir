@@ -20,7 +20,7 @@
 
 @media (width >= 1920px) {
     .WhyItMatters__container {
-      padding: 0 161px 165px 162px;
+      padding: 0 162px 165px;
     }
 }
   
@@ -60,6 +60,12 @@
         gap: 36px;
         margin-bottom: 33px;
     }
+
+    @media (width >= 1920px) {
+        width: 789px;
+        gap: 50px;
+        margin-bottom: 121px;
+    }
 }
 
 .upper_title {
@@ -72,6 +78,10 @@
 
     @media (width >= 1024px) {
             font-size: 96px;
+    }
+
+    @media (width >= 1920px) {
+            font-size: 128px;
     }
 }
 
@@ -107,12 +117,23 @@
 
     @media (width >= 1920px) {
         z-index: 2;
+        margin-bottom: 0;
     }
 } 
+
+.glasses__img {
+    @media (width >= 1920px) {
+        align-self: flex-start;
+    }
+}
 
 .glasses__text {
     @media (width >= 1024px) {
         width: 276px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
     }
 }
 
@@ -121,6 +142,11 @@
     height: 266px;
     border-radius: 100%;
     overflow: hidden;
+
+    @media (width >= 1920px) {
+        width: 303px;
+        height: 303px;
+    }
 }
 
 .WhyItMatters__img img {
@@ -207,11 +233,20 @@
     @media (width >= 1024px) {
         margin-bottom: 50px;
     }
+
+    @media (width >= 1920px) {
+        margin-bottom: 0;
+    }
+    
 }
 
 .antenna__text {
     @media (width >= 1024px) {
         width: 266px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
     }
 }
 
@@ -227,6 +262,16 @@
     @media (width >= 1024px) {
         margin-bottom: 50px;
     }
+
+    @media (width >= 1920px) {
+        margin-bottom: 0;
+    }
+}
+
+.happymodel__img {
+    @media (width >= 1920px) {
+        align-self: flex-end;
+    }
 }
 
 .happymodel__text {
@@ -234,6 +279,10 @@
 
     @media (width >= 1024px) {
         width: 266px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
     }
 }
 
@@ -257,6 +306,10 @@
     @media (width >= 1024px) {
         width: 240px;
     }
+
+    @media (width >= 1920px) {
+        width: 100%;
+    }
 }
 
 .WhyItMatters__propellers {
@@ -273,11 +326,21 @@
     }
 }
 
+.propellers__img {
+    @media (width >= 1920px) {
+        align-self: flex-end;
+    }
+}
+
 .propellers__text {
     width: 290px;
 
     @media (width >= 1024px) {
         width: 266px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
     }
 }
 
@@ -320,7 +383,8 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-    }  
+        margin-bottom: 172px;
+    }
 }
 
 .WhyItMatters__big_container_upper::before {
@@ -330,7 +394,7 @@
         display: initial;
         content: '';
         position: absolute;
-        top: 33%; 
+        top: 43%; 
         left: 0;
         right: 0;
         height: 3px;
@@ -346,6 +410,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 196px;
 }
 
 .lower_dot_container {
@@ -353,7 +418,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 400px;
     position: relative;
 
 }
@@ -365,7 +429,7 @@
         display: initial;
         content: '';
         position: absolute;
-        top: 33%; 
+        top: 43%; 
         left: 0;
         right: 0;
         height: 3px;

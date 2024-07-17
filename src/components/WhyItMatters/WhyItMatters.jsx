@@ -114,7 +114,7 @@ export const WhyItMatters = () => {
 
           <div className={s.WhyItMatters__big_container_upper}>
             <div className={s.WhyItMatters__glasses}>
-              <div className={s.WhyItMatters__img}>
+              <div className={`${s.WhyItMatters__img} ${s.glasses__img}`}>
                 <img src={glasses} alt="Glasses" />
               </div>
               <p className={s.WhyItMatters__text}>
@@ -132,7 +132,7 @@ export const WhyItMatters = () => {
             </div>
 
             <div className={s.WhyItMatters__happymodel}>
-              <div className={s.WhyItMatters__img}>
+              <div className={`${s.WhyItMatters__img} ${s.happymodel__img}`}>
                 <img src={happymodel} alt="Happymodel" />
               </div>
               <p className={`${s.WhyItMatters__text} ${s.happymodel__text}`}>
@@ -152,7 +152,7 @@ export const WhyItMatters = () => {
                 </p>
               </div>
               <div className={s.WhyItMatters__propellers}>
-                <div className={s.WhyItMatters__img}>
+                <div className={`${s.WhyItMatters__img} ${s.propellers__img}`}>
                   <img src={propellers} alt="Propellers" />
                 </div>
                 <p className={`${s.WhyItMatters__text} ${s.propellers__text}`}>
