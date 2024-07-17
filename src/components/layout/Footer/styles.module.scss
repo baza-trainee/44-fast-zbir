@@ -1,0 +1,31 @@
+@import '../../../styles/common';
+
+.footer {
+  font-family: var(--second-family);
+  color: rgb(244 244 244);
+
+  p {
+    padding: 10px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+  }
+
+  @media screen and (width <= 1024px) {
+    p {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1596px;
+  margin: 0 auto;
+  padding: 0 40px 75px;
+
+  @media screen and (width <= 1024px) {
+    padding: 0 80px 83px;
+  }
+}
