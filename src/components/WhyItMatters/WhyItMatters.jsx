@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import s from './styles.module.scss';
 import glasses from '../../assets/imageswhyitmatters/glasses.png';
 import antenna from '../../assets/imageswhyitmatters/antenna.png';
@@ -6,15 +7,38 @@ import radiomaster from '../../assets/imageswhyitmatters/radiomaster.png';
 import propellers from '../../assets/imageswhyitmatters/propellers.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
+import ThankYouModal from '../ThankYouModal/ThankYouModal';
 
 export const WhyItMatters = () => {
-  const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // замінити на потрібне посилання
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <section className={s.WhyItMatters}>
       <div className={s.WhyItMatters__container}>
+        <div className={s.WhyItMatters__wrapper}>
+          <div className={s.WhyItMatters__upper}>
+            <h1>
+              Чому це
+              <br />
+              <span>важливо?</span>
+            </h1>
+            <p>
+              Докупівля обладнання із переліку дозволить бригаді проводити
+              розвідку, коригувати вогонь, наводити на цілі, рятувати поранених.
+            </p>
+          </div>
+          <div className={s.WhyItMatters__glasses}>
+            <div className={s.WhyItMatters__img}>
+              <img src={glasses} alt="Glasses" />
+=======
         {/* Mobile and Tablet screen */}
         <div className={s.WhyItMatters__small_wrapper}>
           <div className={s.WhyItMatters__nodot_container}>
@@ -92,7 +116,7 @@ export const WhyItMatters = () => {
               hoverText="Летить мій донат"
               activeText="Летить мій донат"
               icon={<img src={plane} alt="Plane" />}
-              onClick={handleClick}
+              onClick={handleButtonClick}
               type="join"
             />
           </div>
@@ -178,6 +202,7 @@ export const WhyItMatters = () => {
           </div>
         </div>
       </div>
+      {isModalOpen && <ThankYouModal onClose={handleCloseModal} />}
     </section>
   );
 };
