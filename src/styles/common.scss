@@ -6,3 +6,17 @@
 
   --background-black: linear-gradient(126deg, #1e1e21 0%, #27272d 100%);
 }
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    126.44deg,
+    rgb(30 30 33) -1.719%,
+    rgb(39 39 45) 100.52%
+  );
+}
