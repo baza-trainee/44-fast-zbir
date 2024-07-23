@@ -1,3 +1,7 @@
+:root {
+    --dot-line: url('../../assets/imagesWhyItMatters/dot-line.svg');
+  }
+
 .WhyItMatters {
     background: linear-gradient(126deg, #1e1e21 0%, #27272d 100%);
 }
@@ -16,12 +20,30 @@
 
 @media (width >= 1920px) {
     .WhyItMatters__container {
-      padding: 0 161px 165px 162px;
+      padding: 0 162px 165px;
     }
 }
   
-.WhyItMatters__wrapper {
-    display: grid;
+// Mobile and Tablet screen ------------------------------/
+.WhyItMatters__small_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (width >= 1920px) {
+        display: none;
+    }
+}
+
+.WhyItMatters__nodot_container {
+    display: flex;
+    flex-direction: column;
+
+    @media (width >= 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .WhyItMatters__upper {
@@ -30,27 +52,54 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 1.08;
-    text-transform: uppercase;
     gap: 50px;
     margin-bottom: 50px;
+
+    @media (width >= 1024px) {
+        width: 482px;
+        gap: 36px;
+        margin-bottom: 33px;
+    }
+
+    @media (width >= 1920px) {
+        width: 789px;
+        gap: 50px;
+        margin-bottom: 121px;
+    }
 }
 
-.WhyItMatters__upper h1, .WhyItMatters__upper span {
+.upper_title {
     font-family: var(--font-family);
-}
-
-.WhyItMatters__upper h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.08;
+    text-transform: uppercase;
     color: #ececec;
+
+    @media (width >= 1024px) {
+            font-size: 96px;
+    }
+
+    @media (width >= 1920px) {
+            font-size: 128px;
+    }
 }
 
-.WhyItMatters__upper span {
+.upper_title > span {
     color: #fc0;
 }
 
-.WhyItMatters__upper p {
+.WhyItMatters__upper p, .WhyItMatters__lower p {
     font-family: var(--second-family);
+    font-size: 16px; 
+
+    @media (width >= 1024px) {
+        font-size: 24px;
+    }
+}
+
+.WhyItMatters__upper p {
     font-weight: 400;
-    font-size: 16px;
     color: #f4f4f4;
 }
 
@@ -61,37 +110,115 @@
     align-items: center;
     gap: 27px;
     margin-bottom: 94px;
+
+    @media (width >= 1024px) {
+        margin-bottom: 50px;
+    }
+
+    @media (width >= 1920px) {
+        z-index: 2;
+        margin-bottom: 0;
+    }
 } 
 
-// .WhyItMatters__img {
-//     width: 267px;
-//     height: 266px;
-//     border-radius: 100%;
-//     background-color: #1a1a1d;
-//     border: 1px solid #fc0;
-//     overflow: hidden;
-// }
+.glasses__img {
+    @media (width >= 1920px) {
+        align-self: flex-start;
+    }
+}
 
-// .WhyItMatters__img img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: contain;
-// }
+.glasses__text {
+    @media (width >= 1024px) {
+        width: 276px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
+    }
+}
+
+.WhyItMatters__img {
+    width: 267px;
+    height: 266px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    @media (width >= 1920px) {
+        width: 303px;
+        height: 303px;
+    }
+}
+
+.WhyItMatters__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 .WhyItMatters__text {
     font-family: var(--font-family);
-    font-weight: 700;
     font-size: 16px;
     text-align: center;
     color: #f4f4f4;
+
+    @media (width >= 1024px) {
+        font-size: 24px;
+    }
 }
 
-.WhyItMatters__dot {
-    display: none;
+.WhyItMatters__dot_container {
+    display: flex;
+    flex-direction: column;
+
+    @media (width >= 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; 
+    }
 }
 
-.WhyItMatters__firstdot {
+.WhyItMatters__dot_container_up::before {
     display: none;
+
+    @media (width >= 1024px) {
+        display: initial;
+        content: '';
+        position: absolute;
+        top: 33%; 
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-image: var(--dot-line);
+        background-position: center;
+        background-repeat: repeat-x;
+        z-index: 1;
+    }
+}
+
+.WhyItMatters__dot_container_down::before {
+    display: none;
+
+    @media (width >= 1024px) {
+        display: initial;
+        content: '';
+        position: absolute;
+        top: 39%; 
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-image: var(--dot-line);
+        background-position: center;
+        background-repeat: repeat-x;
+        z-index: 1;
+    }
+}
+
+.WhyItMatters__dot_container_down {
+    @media (width >= 1024px) {
+        margin-bottom: 60px;
+    }
 }
 
 .WhyItMatters__antenna {
@@ -101,6 +228,26 @@
     align-items: center;
     gap: 27px;
     margin-bottom: 94px;
+    z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 50px;
+    }
+
+    @media (width >= 1920px) {
+        margin-bottom: 0;
+    }
+    
+}
+
+.antenna__text {
+    @media (width >= 1024px) {
+        width: 266px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
+    }
 }
 
 .WhyItMatters__happymodel {
@@ -108,12 +255,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 34px;
+    gap: 27px;
     margin-bottom: 72px;
+    z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 50px;
+    }
+
+    @media (width >= 1920px) {
+        margin-bottom: 0;
+    }
+}
+
+.happymodel__img {
+    @media (width >= 1920px) {
+        align-self: flex-end;
+    }
 }
 
 .happymodel__text {
-    max-width: 220px;
+    width: 220px;
+
+    @media (width >= 1024px) {
+        width: 266px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
+    }
 }
 
 .WhyItMatters__radiomaster {
@@ -123,10 +293,23 @@
     align-items: center;
     gap: 27px;
     margin-bottom: 72px;
+    z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 0;
+    }
 }
 
 .radiomaster__text {
-    max-width: 160px;
+    width: 160px;
+
+    @media (width >= 1024px) {
+        width: 240px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
+    }
 }
 
 .WhyItMatters__propellers {
@@ -134,24 +317,125 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 34px;
+    gap: 27px;
     margin-bottom: 86px;
+    z-index: 2;
+
+    @media (width >= 1024px) {
+        margin-bottom: 0;
+    }
+}
+
+.propellers__img {
+    @media (width >= 1920px) {
+        align-self: flex-end;
+    }
+}
+
+.propellers__text {
+    width: 290px;
+
+    @media (width >= 1024px) {
+        width: 266px;
+    }
+
+    @media (width >= 1920px) {
+        width: 100%;
+    }
 }
 
 .WhyItMatters__lower {
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    @media (width >= 1024px) {
+        gap: 60px;
+    }
 }
 
 .WhyItMatters__lower p {
-    font-family: var(--second-family);
     font-weight: 600;
-    font-size: 16px;
     text-align: center;
     color: #fc0;
 }
 
 .WhyItMatters .join_btn {
     align-self: center;
+}
+
+// Desktop screen ------------------------------------/
+.WhyItMatters__big_wrapper {
+    display: none;
+
+    @media (width >= 1920px) {
+        display: flex;
+        flex-direction: column;
+    } 
+}
+
+.WhyItMatters__big_container_upper {
+    display: none;
+
+    @media (width >= 1920px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 172px;
+    }
+}
+
+.WhyItMatters__big_container_upper::before {
+    display: none; 
+    
+    @media (width >= 1920px) {
+        display: initial;
+        content: '';
+        position: absolute;
+        top: 43%; 
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-image: var(--dot-line);
+        background-position: center;
+        background-repeat: repeat-x;
+        z-index: 1;
+    }
+}
+
+.WhyItMatters__big_container_lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 196px;
+}
+
+.lower_dot_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.lower_dot_container::before  {
+    display: none; 
+    
+    @media (width >= 1920px) {
+        display: initial;
+        content: '';
+        position: absolute;
+        top: 43%; 
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-image: var(--dot-line);
+        background-position: center;
+        background-repeat: repeat-x;
+        z-index: 1;
+    }
 }
