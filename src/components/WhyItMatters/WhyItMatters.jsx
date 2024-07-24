@@ -9,7 +9,7 @@ import plane from '../../assets/buttonIcons/plane.svg';
 
 export const WhyItMatters = () => {
   const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // замінити на потрібне посилання
+    window.location.href = 'https://send.monobank.ua/jar/AHkZPMTCF';
   };
 
   return (
