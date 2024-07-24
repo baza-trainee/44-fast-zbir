@@ -1,3 +1,105 @@
 .fastfundraiser {
   width: 100%;
+  color: #fff;
+  padding-top: 71px;
+
+  &__container {
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 0 40px 75px;
+
+    @media (width >= 1024px) {
+      padding: 0 80px;
+    }
+
+    @media (width >= 1920px) {
+      padding: 0;
+    }
+  }
+
+  &__body {
+    gap: 80px;
+    align-items: center;
+    display: flex;
+
+    @media (width <= 1300px) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse-animation {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    span {
+      position: absolute;
+      width: 70%;
+      height: 90%;
+      left: 18%;
+      top: 20%;
+      border: 2px solid yellow;
+      border-radius: 50%;
+      box-shadow: inset 0 0 40px #b9b91a;
+      animation: pulse-animation 2s infinite;
+      
+      &:nth-child(1) {
+        width: 51%;
+        height: 67%;
+        top: 32%;
+        left: 27%;
+      }
+      
+      &:nth-child(2) {
+        width: 25%;
+        height: 31%;
+        top: 49%;
+        left: 40%;
+        box-shadow: inset 0 0 80px #b9b91a;
+      }
+    }
+  }
+
+  &__content {
+    @media (width >= 1100px) {
+      max-width: 788px;
+    }
+  }
+
+  &__heading {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: calc(64px + (108 - 20) * ((100vw - 320px) / (1920 - 320)));
+    text-transform: uppercase;
+    color: #ececec;
+    font-stretch: condensed;
+    line-height: 107.9%;
+  }
+
+  &__text {
+    font-size: calc(16px + (28 - 20) * ((100vw - 320px) / (1920 - 1024)));
+    margin-bottom: calc(40px + (92 - 20) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 135.9%;
+  }
 }
