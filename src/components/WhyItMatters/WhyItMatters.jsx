@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import s from './styles.module.scss';
-import glasses from '../../assets/imagesWhyItMatters/glasses.png';
-import antenna from '../../assets/imagesWhyItMatters/antenna.png';
-import happymodel from '../../assets/imagesWhyItMatters/happymodel.png';
-import radiomaster from '../../assets/imagesWhyItMatters/radiomaster.png';
-import propellers from '../../assets/imagesWhyItMatters/propellers.png';
+import glasses from '../../assets/imagesWhyIt/glasses.png';
+import antenna from '../../assets/imagesWhyIt/antenna.png';
+import happymodel from '../../assets/imagesWhyIt/happymodel.png';
+import radiomaster from '../../assets/imagesWhyIt/radiomaster.png';
+import propellers from '../../assets/imagesWhyIt/propellers.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
 import ThankYouModal from '../ThankYouModal/ThankYouModal';
