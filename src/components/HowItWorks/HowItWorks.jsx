@@ -2,6 +2,7 @@ import { useState } from 'react';
 import s from './styles.module.scss';
 import imgMobile from '../../assets/imagesHowItWorks/img-mobile.png';
 import imgTablet from '../../assets/imagesHowItWorks/img-tablet.png';
+import imgDesktop from '../../assets/imagesHowItWorks/img-desktop.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
 import ThankYouModal from '../ThankYouModal/ThankYouModal';
@@ -27,6 +28,9 @@ export const HowItWorks = () => {
           </div>
           <div className={s.HowItWorks__img_tablet}>
             <img src={imgTablet} alt="How it works" />
+          </div>
+          <div className={s.HowItWorks__img_desktop}>
+            <img src={imgDesktop} alt="How it works" />
           </div>
           <ul className={s.HowItWorks__list}>
             <li>Проводити розвідку та виявляти позиції ворога.</li>
