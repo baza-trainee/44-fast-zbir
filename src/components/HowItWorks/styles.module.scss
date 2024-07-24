@@ -117,7 +117,9 @@
 }
 
 .join_btn {
-    align-self: flex-end;
+    @media (width >= 1920px) {
+        align-self: flex-end;
+    }
 }
 
 
