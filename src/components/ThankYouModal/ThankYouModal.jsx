@@ -1,18 +1,20 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import s from './styles.module.scss';
-import Button from '../ui/Button/Button';
-import heart from '../../assets/modal/svg/Heart.svg';
-import plane from '../../assets/buttonIcons/plane.svg';
-import x from '../../assets/modal/svg/X.svg';
+// import Button from '../ui/Button/Button';
+// import heart from '../../assets/modal/svg/Heart.svg';
+// import plane from '../../assets/buttonIcons/plane.svg';
+// import x from '../../assets/modal/svg/X.svg';
 
-const ThankYouModal = ({ onClose }) => {
-  const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // Замініть на потрібне посилання
-  };
+const ThankYouModal = () =>
+  // { onClose }
+  {
+    // const handleClick = () => {
+    //   window.location.href = 'https://www.example.com'; // Замініть на потрібне посилання
+    // };
 
-  return (
-    <div className={s.overlay}>
-      <div className={s.modal}>
+    return (
+      <div className={s.overlay}>
+        {/* <div className={s.modal}>
         <button className={s.closeButton} onClick={onClose}>
           <img src={x} alt="Close" />
         </button>
@@ -35,13 +37,13 @@ const ThankYouModal = ({ onClose }) => {
             onClick={handleClick}
           />
         </div>
+      </div> */}
       </div>
-    </div>
-  );
-};
+    );
+  };
 
-ThankYouModal.propTypes = {
-  onClose: PropTypes.func.isRequired
-};
+// ThankYouModal.propTypes = {
+//   onClose: PropTypes.func.isRequired
+// };
 
 export default ThankYouModal;
