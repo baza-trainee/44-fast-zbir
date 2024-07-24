@@ -1,2 +1,127 @@
 .HowItWorks {
+    background-color: #fff;
+
+    &__container {
+        max-width: 1596px;
+        margin: 0 auto;
+        padding: 75px 40px;
+
+        @media (width >= 1024px) {
+            padding: 80px 80px 136px;
+        }
+
+        @media (width >= 1920px) {
+            padding: 185px 162px 123px 161px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 75px;
+
+        @media (width >= 1024px) {
+            gap: 0;
+        }
+    }
+
+    &__title {
+        font-family: "Open Sans Condensed", sans-serif;;
+        font-weight: 700;
+
+        // font-size: 48px;
+        font-size: 46px;
+        line-height: 1.08;
+        text-transform: uppercase;
+        color: #1e1e21;
+        letter-spacing: -6px;
+
+        @media (width >= 1024px) {
+            align-self: flex-start;
+            width: 539px;
+            font-size: 96px;
+            text-align: left;
+        }
+
+        @media (width >= 1920px) {
+            font-size: 128px;
+            width: 627px;
+        }
+    }
+
+    &__img_mobile {
+        height: 562.78px;
+        width: 327.45px;
+
+        @media (width >= 1024px) {
+            display: none;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            
+        }
+    }
+
+    &__img_tablet {
+        display: none;
+
+        @media (width >= 1024px) {
+            display: initial;
+            margin-top: -135px;
+        }
+
+        @media (width >= 1920px) {
+            display: none;
+        }
+    }
+
+    &__img_desktop {
+        display: none;
+
+        @media (width >= 1920px) {
+            display: initial;
+            margin-top: -320px;
+        }
+    }
+
+    &__list {
+        list-style: disc;
+        padding-left: 20px;
+
+        @media (width >= 1024px) {
+            width: 456px;
+            align-self: flex-end;
+            margin: -150px 0 150px;
+        }
+
+        @media (width >= 1920px) {
+            width: 477px;
+            margin: -300px 0 51px;
+        }
+
+        li {
+            font-family:  "Open Sans", sans-serif;;
+            font-weight: 400;
+            font-size: 16px;
+            color: #24242a;
+
+            @media (width >= 1024px) {
+                font-size: 24px;
+            }
+        }
+    }
 }
+
+.join_btn {
+    align-self: flex-end;
+}
+
+
+
+
+
+
