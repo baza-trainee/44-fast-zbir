@@ -21,7 +21,7 @@ export const WhyItMatters = () => {
 
   const handleButtonClick = () => {
     localStorage.setItem('donationStarted', 'true');
-    window.location.href = '#';
+    window.location.href = 'https://send.monobank.ua/jar/AHkZPMTCF';
   };
 
   const handleCloseModal = () => {
