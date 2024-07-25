@@ -5,7 +5,7 @@ import plane from '../../assets/buttonIcons/plane.svg';
 
 export const FastFundraiser = () => {
   const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // замінити на потрібне посилання
+    window.open('https://send.monobank.ua/jar/AHkZPMTCF', '_blank'); // замінити на потрібне посилання
   };
   return (
     <section className={s.fastfundraiser}>

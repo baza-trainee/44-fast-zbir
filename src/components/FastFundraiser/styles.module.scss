@@ -1,7 +1,7 @@
 .fastfundraiser {
   width: 100%;
   color: #fff;
-  padding-top: 71px;
+  padding-top: calc(130px + (150 - 20) * ((100vw - 320px) / (1920 - 320)));
 
   &__container {
     max-width: 1596px;
