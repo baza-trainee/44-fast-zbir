@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import s from './styles.module.scss';
 import imgMobile from '../../assets/imagesHowItWorks/img-mobile.png';
 import imgTablet from '../../assets/imagesHowItWorks/img-tablet.png';
@@ -10,8 +10,16 @@ import ThankYouModal from '../ThankYouModal/ThankYouModal';
 export const HowItWorks = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    if (localStorage.getItem('donationCompleted') === 'true') {
+      setIsModalOpen(true);
+      localStorage.removeItem('donationCompleted');
+    }
+  }, []);
+
   const handleButtonClick = () => {
-    setIsModalOpen(true);
+    localStorage.setItem('donationStarted', 'true');
+    window.location.href = 'https://send.monobank.ua/jar/AHkZPMTCF';
   };
 
   const handleCloseModal = () => {
