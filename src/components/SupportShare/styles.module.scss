@@ -6,20 +6,18 @@
   padding: 75px 40px 70px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   max-width: 1920px;
   margin: 0 auto;
 
   @media screen and (width >= 1024px) {
     padding: 150px 80px 120px;
     width: 1024px;
-    margin: 0;
-
-    // width: 1024px;
+    align-items: flex-end;
   }
 
   @media screen and (width >= 1920px) {
-    padding: 244px 160px 120px;
+    padding: 244px 162px 120px;
     position: relative;
     width: 1920px;
   }
