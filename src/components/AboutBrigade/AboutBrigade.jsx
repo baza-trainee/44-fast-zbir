@@ -3,7 +3,7 @@ import chevron from '../../assets/imagesAboutBrigade/44th.separate.big.svg';
 
 export const AboutBrigade = () => {
   return (
-    <section className={s.aboutbrigade}>
+    <section id="2" className={s.aboutbrigade}>
       <div className={s.container}>
         <div className={s.flex_wrapper}>
           <div className={s.info}>

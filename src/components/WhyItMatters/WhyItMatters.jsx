@@ -29,7 +29,7 @@ export const WhyItMatters = () => {
   };
 
   return (
-    <section className={s.WhyItMatters}>
+    <section id="3" className={s.WhyItMatters}>
       <div className={s.WhyItMatters__container}>
         <div className={s.WhyItMatters__wrapper}>
           {/* Mobile and Tablet screen */}
