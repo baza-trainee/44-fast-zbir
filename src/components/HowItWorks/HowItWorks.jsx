@@ -27,7 +27,7 @@ export const HowItWorks = () => {
   };
 
   return (
-    <section className={s.HowItWorks}>
+    <section id="4" className={s.HowItWorks}>
       <div className={s.HowItWorks__container}>
         <div className={s.HowItWorks__wrapper}>
           <div className={s.HowItWorks__title}>Як це працює?</div>
