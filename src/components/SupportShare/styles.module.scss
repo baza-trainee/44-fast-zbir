@@ -9,6 +9,7 @@
   align-items: center;
   max-width: 1920px;
   margin: 0 auto;
+  position: relative;
 
   @media screen and (width >= 1024px) {
     padding: 150px 80px 120px;
@@ -75,20 +76,22 @@
       font-size: 96px;
       line-height: 100px;
       width: 796px;
-      letter-spacing: -2px;
+      letter-spacing: -7px;
       margin-bottom: 0;
 
       span {
-        width: 935px;
+        width: 840px;
+        letter-spacing: -7px;
+        font-size: 96px;
       }
 
       &::after {
         content: '';
         background-image: url('../../assets/share/Vectordesk.svg');
-        width: 383px;
+        width: 380px;
         height: 163px;
-        left: 110%;
-        transform: translateY(0%);
+        left: 97%;
+        transform: scaleX(0.9);
       }
     }
   }
@@ -96,7 +99,7 @@
   @media screen and (width >= 1920px) {
     .share_btn {
       position: absolute;
-      right: 0;
+      right: 8%;
       bottom: 20%;
     }
   }
