@@ -75,11 +75,12 @@
       font-size: 96px;
       line-height: 100px;
       width: 796px;
-      letter-spacing: -2px;
+      letter-spacing: -7px;
       margin-bottom: 0;
 
       span {
-        width: 935px;
+        width: 835px;
+        letter-spacing: -7px;
       }
 
       &::after {
@@ -87,8 +88,10 @@
         background-image: url('../../assets/share/Vectordesk.svg');
         width: 383px;
         height: 163px;
-        left: 110%;
-        transform: translateY(0%);
+        left: 97%;
+        transform: scale(0.8);
+
+        // transform: translateY(0%);
       }
     }
   }
@@ -96,7 +99,7 @@
   @media screen and (width >= 1920px) {
     .share_btn {
       position: absolute;
-      right: 0;
+      right: 8%;
       bottom: 20%;
     }
   }
