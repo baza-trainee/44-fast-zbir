@@ -19,7 +19,7 @@
         }
     }
 
-    .join_btn{
+    .join_btn {
         align-self: center;
     }
 
@@ -27,12 +27,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+
         p {
             font-family: var(--font-family);
             text-transform: uppercase;
             font-size: calc(18px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
             font-weight: bold;
         }
+    }
+
+    .details__progress {
+        background: linear-gradient(126deg, #1e1e21 90%, #27272d 100%);
     }
 }
