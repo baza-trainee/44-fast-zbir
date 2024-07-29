@@ -27,13 +27,20 @@ export const ProgressBar = () => {
           <p className={s.progressBar__collect}>Наразі зібрано</p>
           <p className={s.progressBar__collect}>Наша мета</p>
         </div>
-
-        <div className={s.details__collect_wrapper}>
+        <progress
+          value={5000}
+          max={max}
+          className={`${s.details__progress} ${isComplete && s.details__progress_complete}`}
+        ></progress>
+        <div className={s.progressBar__detalik}>
           <p className={s.details__collect}>
-            Зібрано:{' '}
+            {' '}
             <span>
               <strong>{formattedValue} грн </strong>
             </span>
+          </p>
+          <p className={s.progressBar__text}>
+            Забезпечення 44-ї бригади необхідним обладнянням.{' '}
           </p>
           <p className={s.details__collect}>
             з{' '}
@@ -44,11 +51,6 @@ export const ProgressBar = () => {
             </span>
           </p>
         </div>
-        <progress
-          value={balance}
-          max={max}
-          className={`${s.details__progress} ${isComplete && s.details__progress_complete}`}
-        ></progress>
         {isComplete && (
           <p className={s.details__done}>
             <strong>Збір завершено</strong>
