@@ -4,7 +4,7 @@ import { AboutBrigade } from '../../AboutBrigade/AboutBrigade';
 import { WhyItMatters } from '../../WhyItMatters/WhyItMatters';
 import { HowItWorks } from '../../HowItWorks/HowItWorks';
 import { SupportShare } from '../../SupportShare/SupportShare';
-// import ThankYouModal from '../../ThankYouModal/ThankYouModal';
+import ThankYouModal from '../../ThankYouModal/ThankYouModal';
 
 export const Content = () => {
   return (
@@ -15,7 +15,7 @@ export const Content = () => {
       <WhyItMatters />
       <HowItWorks />
       <SupportShare />
-      {/* <ThankYouModal /> */}
+      <ThankYouModal />
     </main>
   );
 };
