@@ -7,7 +7,6 @@
   border: none;
   border-radius: 90px;
   transition: all 0.3s ease;
-  letter-spacing: -2px;
 
   &:hover {
     background: #fff2bd;
@@ -21,7 +20,7 @@
 
 .icon {
   margin-left: 10px;
-  transition: margin-left 2s ease;
+  transition: margin-left 1s ease;
   align-self: center;
 }
 
@@ -38,7 +37,8 @@
 }
 
 .button.join:hover .icon {
-  margin-left: 86px;
+  // margin-left: 86px;
+  margin-left: 40px;
 }
 
 @media (width >= 1024px) {
@@ -49,19 +49,21 @@
   }
 
   .button.join:hover .icon {
-    margin-left: 469px;
+    // margin-left: 469px;
+    margin-left: 420px;
   }
 }
 
 @media (width >= 1920px) {
-  .join {
+    .join {
     height: 103px;
     width: 465px;
     padding: 33px 38px;
   }
 
   .button.join:hover .icon {
-    margin-left: 174px;
+    // margin-left: 174px;
+    margin-left: 155px;
   }
 }
 
@@ -78,7 +80,8 @@
 }
 
 .button.share:hover .icon {
-  margin-left: 131px;
+  // margin-left: 131px;
+  margin-left: 110px;
 }
 
 @media (width >= 1024px) {
@@ -93,7 +96,8 @@
   }
 
   .button.share:hover .icon {
-    margin-left: 233px;
+    // margin-left: 233px;
+    margin-left: 200px;
   }
 }
 
@@ -103,9 +107,10 @@
     height: 100px;
     padding: 33px 50px;
   }
-
+  
   .button.share:hover .icon {
-    margin-left: 212px;
+    // margin-left: 212px;
+    margin-left: 205px;
   }
 }
 
@@ -156,13 +161,13 @@
   
   // font-size: 20px;
   font-size: 18px;
+  font-size: 20px
   text-transform: uppercase;
   text-align: left;
 }
 
 @media (width >= 1920px) {
   .text {
-    // font-size: 24px;
-    font-size: 22px;
+    font-size: 24px;
   }
 }
