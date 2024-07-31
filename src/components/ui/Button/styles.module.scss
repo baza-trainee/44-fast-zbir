@@ -122,12 +122,13 @@
 }
 
 .button.toMain:hover .icon {
-  margin-left: 78px;
+  // margin-left: 78px;
+  margin-left: 45px;
 }
 
 @media (width >= 1024px) {
   .toMain {
-    width: 414px;
+    width: 422px;
     height: 70px;
     padding: 30px 70px;
   }
@@ -137,7 +138,8 @@
   }
 
   .button.toMain:hover .icon {
-    margin-left: 142px;
+    // margin-left: 142px;
+    margin-left: 118px;
   }
 }
 
@@ -149,7 +151,8 @@
   }
 
   .button.toMain:hover .icon {
-    margin-left: 236px;
+    // margin-left: 236px;
+    margin-left: 200px;
   }
 }
 
