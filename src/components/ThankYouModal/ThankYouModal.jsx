@@ -27,9 +27,9 @@ const ThankYouModal = ({ onClose }) => {
         <div className={s.buttonContainer}>
           <Button
             text="НА ГОЛОВНУ"
-            hoverText="Летить мій донат"
+            hoverText="НА ГОЛОВНУ"
             icon={<img src={plane} alt="Plane" />}
-            activeText="Летить мій донат"
+            activeText="НА ГОЛОВНУ"
             type="toMain"
             className={s.main_btn}
             onClick={handleClick}
