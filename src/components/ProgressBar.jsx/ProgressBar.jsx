@@ -1,5 +1,72 @@
+import { useState, useEffect } from 'react';
 import s from './styles.module.scss';
+import Button from '../ui/Button/Button';
+import plane from '../../assets/buttonIcons/plane.svg';
+import getBalance from '../../helpers/getBalance';
+import { formatNumber } from '../../helpers/formattedNum';
 
 export const ProgressBar = () => {
-  return <section className={s.progressBar}>ProgressBar</section>;
+  const handleClick = () => {
+    window.open('https://send.monobank.ua/jar/AHkZPMTCF', '_blank'); // замінити на потрібне посилання
+  };
+
+  const max = 48000;
+  const [balance, setBalance] = useState(0);
+  const formattedValue = formatNumber(balance);
+  const formattedMaxProgress = formatNumber(max);
+  const isComplete = balance >= max;
+
+  useEffect(() => {
+    getBalance(setBalance);
+  }, []);
+
+  return (
+    <section id="1" className={s.progressBar}>
+      <div className={s.progressBar__container}>
+        <div className={s.progressBar__detalik}>
+          <p className={s.progressBar__collect}>Наразі зібрано</p>
+          <p className={s.progressBar__collect}>Наша мета</p>
+        </div>
+        <progress
+          value={balance}
+          max={max}
+          className={`${s.details__progress} ${isComplete && s.details__progress_complete}`}
+        ></progress>
+        <div className={s.progressBar__detalik}>
+          <p className={s.details__collect}>
+            {' '}
+            <span>
+              <strong>{formattedValue} грн </strong>
+            </span>
+          </p>
+          <p className={s.progressBar__text}>
+            Забезпечення 44-ї бригади необхідним обладнянням.{' '}
+          </p>
+          <p className={s.details__collect}>
+            {' '}
+            <span className={s.details__total}>
+              <strong className={s.details__total}>
+                {formattedMaxProgress} грн
+              </strong>
+            </span>
+          </p>
+        </div>
+        {isComplete && (
+          <p className={s.details__done}>
+            <strong>Збір завершено</strong>
+          </p>
+        )}
+
+        <Button
+          className={s.join_btn}
+          text="Хочу доєднатись"
+          hoverText="Летить мій донат"
+          activeText="Летить мій донат"
+          icon={<img src={plane} alt="Plane" />}
+          onClick={handleClick}
+          type="join"
+        />
+      </div>
+    </section>
+  );
 };

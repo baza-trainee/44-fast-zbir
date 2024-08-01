@@ -7,20 +7,18 @@ import x from '../../assets/modal/svg/X.svg';
 
 const ThankYouModal = ({ onClose }) => {
   const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // замінити на потрібне посилання
+    window.location.href = 'https://www.example.com'; // Замінити на потрібне посилання
   };
 
   return (
     <div className={s.overlay}>
       <div className={s.modal}>
         <button className={s.closeButton} onClick={onClose}>
-          <img src={x} alt="x" />
+          <img src={x} alt="Close" />
         </button>
-        <div className={s.header}>
-          ДЯКУЄМО ЗА <span className={s.highlight}>ТВІЙ ДОНАТ!</span>
-        </div>
+        <h1 className={s.header}>ДЯКУЄМО ЗА ТВІЙ ДОНАТ!</h1>
         <div className={s.icon}>
-          <img src={heart} alt="heart" />
+          <img src={heart} alt="Heart" />
         </div>
         <p className={s.description}>
           Кожен твій донат допомагає нищити ворогів і наближати нашу Перемогу!
@@ -29,9 +27,9 @@ const ThankYouModal = ({ onClose }) => {
         <div className={s.buttonContainer}>
           <Button
             text="НА ГОЛОВНУ"
-            hoverText="ЛЕТИТЬ МІЙ ДОНАТ"
-            icon={<img src={plane} alt="plane" />}
-            activeText="ЛЕТИТЬ МІЙ ДОНАТ"
+            hoverText="Летить мій донат"
+            icon={<img src={plane} alt="Plane" />}
+            activeText="Летить мій донат"
             type="toMain"
             className={s.main_btn}
             onClick={handleClick}

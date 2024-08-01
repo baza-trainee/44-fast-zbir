@@ -3,7 +3,7 @@
 .SupportShare {
   font-family: var(--font-family);
   color: rgb(244 244 244);
-  padding: 75px 20px 70px;
+  padding: 75px 40px 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,12 +12,14 @@
 
   @media screen and (width >= 1024px) {
     padding: 150px 80px 120px;
-    max-width: 1596px;
+    width: 1024px;
+    align-items: flex-end;
   }
 
   @media screen and (width >= 1920px) {
-    padding: 244px 160px 120px;
+    padding: 244px 162px 120px;
     position: relative;
+    width: 1920px;
   }
 
   h2 {
@@ -35,7 +37,8 @@
       position: absolute;
       width: 109px;
       height: 141px;
-      top: 35%;
+      top: 30%;
+      right: 1%;
       background-repeat: no-repeat;
     }
 
@@ -43,14 +46,16 @@
       display: inline-block;
       color: #fc0;
       width: 350px;
+      letter-spacing: -1px;
     }
 
     @media screen and (width >= 1024px) {
       font-size: 64px;
-      line-height: 84px;
+      line-height: 68px;
       margin-left: 0;
-      margin-bottom: 78px;
+      margin-bottom: 105px;
       width: 532px;
+      letter-spacing: -2px;
 
       span {
         width: 622px;
@@ -61,27 +66,32 @@
         background-image: url('../../assets/share/Vectortab.svg');
         width: 346px;
         height: 161px;
-        left: 13%;
-        transform: translateY(90%);
+        left: 11%;
+        transform: translateY(77%);
       }
     }
 
     @media screen and (width >= 1920px) {
       font-size: 96px;
-      line-height: 131px;
+      line-height: 100px;
       width: 796px;
+      letter-spacing: -7px;
+      margin-bottom: 0;
 
       span {
-        width: 935px;
+        width: 835px;
+        letter-spacing: -7px;
       }
 
       &::after {
         content: '';
         background-image: url('../../assets/share/Vectordesk.svg');
-        width: 380px;
-        height: 161px;
-        left: 114%;
-        transform: translateY(0%);
+        width: 383px;
+        height: 163px;
+        left: 97%;
+        transform: scale(0.8);
+
+        // transform: translateY(0%);
       }
     }
   }
@@ -89,8 +99,8 @@
   @media screen and (width >= 1920px) {
     .share_btn {
       position: absolute;
-      right: 0;
-      top: 55%;
+      right: 8%;
+      bottom: 20%;
     }
   }
 }

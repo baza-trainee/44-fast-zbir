@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Logo from '../../../assets/img/header/logo.png';
 import BurgerMenu from '../../../assets/img/header/burger_menu_icon.svg';
@@ -6,12 +6,12 @@ import BurgerMenu from '../../../assets/img/header/burger_menu_icon.svg';
 import s from './styles.module.scss';
 
 export const Header = () => {
-  const [active, setActive] = useState();
-  const [scrolled, setScrolled] = useState();
-  const scrollRef = useRef();
+  const [active, setActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  // const scrollRef = useRef(null);
 
   const links = [
-    { text: 'Мета', sectionId: '1' }, // change numbers to element id
+    { text: 'Мета', sectionId: '1' },
     { text: 'Про бригаду', sectionId: '2' },
     { text: 'Чому це важливо', sectionId: '3' },
     { text: 'Як це працює?', sectionId: '4' }
@@ -22,8 +22,10 @@ export const Header = () => {
     const element = document.getElementById(sectionId);
     const h = head.offsetHeight;
     if (element) {
-      scrollRef.current = element.offsetTop - h;
-      window.scrollTo(0, scrollRef.current);
+      window.scrollTo({
+        top: element.offsetTop - h,
+        behavior: 'smooth'
+      });
     }
     setActive(false);
   };
@@ -55,10 +57,7 @@ export const Header = () => {
   return (
     <header className={clsx(s.header, { [s.scrolled]: scrolled })}>
       <div className={s.header__wrapper}>
-        <div
-          className={s.logo__wrapper}
-          onClick={() => handleButtonClick('#')} // TODO: Change to section ID
-        >
+        <div className={s.logo__wrapper} onClick={() => handleButtonClick('#')}>
           <img className={s.logo__img} src={Logo} alt="logo" />
         </div>
         <nav className={clsx(s.nav, { [s.active]: active })}>

@@ -6,7 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(123 123 123);
+  background-color: rgb(37 36 42 / 95%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@
     }
 
     .text {
-      color: rgb(35 34 39) 75%;
+      color: rgba(35 34 39 / 75%);
       font-family: var(--second-family);
       font-size: 14px;
       font-weight: 400;
@@ -147,12 +147,17 @@
         transform: translateY(-50%);
         right: 0;
         background-repeat: no-repeat;
+
+        @media screen and (width >= 1024px) {
+          right: 20%;
+        }
       }
 
       @media screen and (width >= 1024px) {
         font-size: 24px;
         line-height: 33px;
         width: 395px;
+        justify-content: center;
       }
     }
 
