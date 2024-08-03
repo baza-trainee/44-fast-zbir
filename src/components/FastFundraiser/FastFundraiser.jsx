@@ -2,11 +2,12 @@ import s from './styles.module.scss';
 import dron from '../../assets/imagesFundraiser/Fundraiser-img.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
+import ThankYouModal from '../ThankYouModal/ThankYouModal';
+import { useDonationStatus } from '../../hooks/useDonationModal';
 
 export const FastFundraiser = () => {
-  const handleClick = () => {
-    window.open('https://send.monobank.ua/jar/AHkZPMTCF', '_blank'); // замінити на потрібне посилання
-  };
+  const { isModalOpen, startDonation, closeModal } = useDonationStatus();
+
   return (
     <section className={s.fastfundraiser}>
       <div className={s.fastfundraiser__container}>
@@ -23,7 +24,7 @@ export const FastFundraiser = () => {
               hoverText="Летить мій донат"
               activeText="Летить мій донат"
               icon={<img src={plane} alt="Plane" />}
-              onClick={handleClick}
+              onClick={startDonation}
               type="join"
             />
           </div>
@@ -37,6 +38,7 @@ export const FastFundraiser = () => {
           </div>
         </div>
       </div>
+      {isModalOpen && <ThankYouModal onClose={closeModal} />}
     </section>
   );
 };
