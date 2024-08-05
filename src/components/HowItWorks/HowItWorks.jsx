@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import s from './styles.module.scss';
 import imgMobile from '../../assets/imagesHowItWorks/img-mobile.png';
 import imgTablet from '../../assets/imagesHowItWorks/img-tablet.png';
@@ -6,25 +5,10 @@ import imgDesktop from '../../assets/imagesHowItWorks/img-desktop.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
 import ThankYouModal from '../ThankYouModal/ThankYouModal';
+import { useDonationStatus } from '../../hooks/useDonationModal';
 
 export const HowItWorks = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (localStorage.getItem('donationCompleted') === 'true') {
-      setIsModalOpen(true);
-      localStorage.removeItem('donationCompleted');
-    }
-  }, []);
-
-  const handleButtonClick = () => {
-    localStorage.setItem('donationStarted', 'true');
-    window.location.href = 'https://send.monobank.ua/jar/AHkZPMTCF';
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  const { isModalOpen, startDonation, closeModal } = useDonationStatus();
 
   return (
     <section id="4" className={s.HowItWorks}>
@@ -54,12 +38,12 @@ export const HowItWorks = () => {
             hoverText="Летить мій донат"
             activeText="Летить мій донат"
             icon={<img src={plane} alt="Plane" />}
-            onClick={handleButtonClick}
+            onClick={startDonation}
             type="join"
           />
         </div>
       </div>
-      {isModalOpen && <ThankYouModal onClose={handleCloseModal} />}
+      {isModalOpen && <ThankYouModal onClose={closeModal} />}
     </section>
   );
 };
