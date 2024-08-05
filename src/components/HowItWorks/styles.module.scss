@@ -44,13 +44,12 @@
   &__title {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-
-    // font-size: 48px;
-    font-size: 46px;
+    font-size: 48px;
     line-height: 1.08;
     text-transform: uppercase;
     color: #1e1e21;
-    letter-spacing: -6px;
+    letter-spacing: -3px;
+    margin: 0 -35px;
 
     @media (width >= 1024px) {
       align-self: flex-start;
