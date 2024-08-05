@@ -379,6 +379,10 @@
   font-weight: 600;
   text-align: center;
   color: #fc0;
+  
+  @media (width >= 1920px) {
+    text-align: left;
+  }
 }
 
 .WhyItMatters .join_btn {
