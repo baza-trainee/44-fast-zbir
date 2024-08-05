@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import s from './styles.module.scss';
 import glasses from '../../assets/imagesWhyItMatters/glasses.png';
 import antenna from '../../assets/imagesWhyItMatters/antenna.png';
@@ -8,25 +7,10 @@ import propellers from '../../assets/imagesWhyItMatters/propellers.png';
 import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
 import ThankYouModal from '../ThankYouModal/ThankYouModal';
+import { useDonationStatus } from '../../hooks/useDonationModal';
 
 export const WhyItMatters = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (localStorage.getItem('donationCompleted') === 'true') {
-      setIsModalOpen(true);
-      localStorage.removeItem('donationCompleted');
-    }
-  }, []);
-
-  const handleButtonClick = () => {
-    localStorage.setItem('donationStarted', 'true');
-    window.location.href = 'https://send.monobank.ua/jar/AHkZPMTCF';
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  const { isModalOpen, startDonation, closeModal } = useDonationStatus();
 
   return (
     <section id="3" className={s.WhyItMatters}>
@@ -109,7 +93,7 @@ export const WhyItMatters = () => {
                 hoverText="Летить мій донат"
                 activeText="Летить мій донат"
                 icon={<img src={plane} alt="Plane" />}
-                onClick={handleButtonClick}
+                onClick={startDonation}
                 type="join"
               />
             </div>
@@ -195,7 +179,7 @@ export const WhyItMatters = () => {
                   hoverText="Летить мій донат"
                   activeText="Летить мій донат"
                   icon={<img src={plane} alt="Plane" />}
-                  onClick={handleButtonClick}
+                  onClick={startDonation}
                   type="join"
                 />
               </div>
@@ -203,7 +187,7 @@ export const WhyItMatters = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && <ThankYouModal onClose={handleCloseModal} />}
+      {isModalOpen && <ThankYouModal onClose={closeModal} />}
     </section>
   );
 };

@@ -4,11 +4,11 @@ import Button from '../ui/Button/Button';
 import plane from '../../assets/buttonIcons/plane.svg';
 import getBalance from '../../helpers/getBalance';
 import { formatNumber } from '../../helpers/formattedNum';
+import ThankYouModal from '../ThankYouModal/ThankYouModal';
+import { useDonationStatus } from '../../hooks/useDonationModal';
 
 export const ProgressBar = () => {
-  const handleClick = () => {
-    window.open('https://send.monobank.ua/jar/AHkZPMTCF', '_blank'); // замінити на потрібне посилання
-  };
+  const { isModalOpen, startDonation, closeModal } = useDonationStatus();
 
   const max = 48000;
   const [balance, setBalance] = useState(0);
@@ -63,10 +63,11 @@ export const ProgressBar = () => {
           hoverText="Летить мій донат"
           activeText="Летить мій донат"
           icon={<img src={plane} alt="Plane" />}
-          onClick={handleClick}
+          onClick={startDonation}
           type="join"
         />
       </div>
+      {isModalOpen && <ThankYouModal onClose={closeModal} />}
     </section>
   );
 };
