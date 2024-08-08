@@ -10,7 +10,7 @@ import { useDonationStatus } from '../../hooks/useDonationModal';
 export const ProgressBar = () => {
   const { isModalOpen, startDonation, closeModal } = useDonationStatus();
 
-  const max = 48000;
+  const max = 47000;
   const [balance, setBalance] = useState(0);
   const formattedValue = formatNumber(balance);
   const formattedMaxProgress = formatNumber(max);

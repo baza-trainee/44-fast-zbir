@@ -1,5 +1,5 @@
 import { FastFundraiser } from '../../FastFundraiser/FastFundraiser';
-import { ProgressBar } from '../../ProgressBar.jsx/ProgressBar';
+import { ProgressBar } from '../../ProgressBar/ProgressBar';
 import { AboutBrigade } from '../../AboutBrigade/AboutBrigade';
 import { WhyItMatters } from '../../WhyItMatters/WhyItMatters';
 import { HowItWorks } from '../../HowItWorks/HowItWorks';
