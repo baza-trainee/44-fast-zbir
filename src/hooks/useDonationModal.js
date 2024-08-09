@@ -19,7 +19,7 @@ export const useDonationStatus = () => {
 
   const startDonation = () => {
     localStorage.setItem('donationStarted', 'true');
-    window.location.href = 'https://send.monobank.ua/jar/AHkZPMTCF';
+    window.open('https://send.monobank.ua/jar/AHkZPMTCF', '_blank');
   };
 
   const closeModal = () => {
