@@ -40,7 +40,7 @@ export const ProgressBar = () => {
             </span>
           </p>
           <p className={s.progressBar__text}>
-            Забезпечення 44-ї бригади необхідним обладнянням.{' '}
+            Забезпечення 44-ї бригади необхідним обладнянням.
           </p>
           <p className={s.details__collect}>
             {' '}
