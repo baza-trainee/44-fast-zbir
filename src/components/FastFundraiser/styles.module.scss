@@ -99,9 +99,9 @@
   }
 
   &__text {
-    font-size: calc(16px + (24 - 20) * ((100vw - 320px) / (1920 - 1024)));
+    font-size: calc(16px + (25 - 20) * ((100vw - 320px) / (1920 - 1024)));
     margin-bottom: calc(40px + (92 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: 140.9%;
-    font-weight: normal;
+    font-weight: 400;
   }
 }
