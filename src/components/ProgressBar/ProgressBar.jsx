@@ -33,10 +33,10 @@ export const ProgressBar = () => {
           className={`${s.details__progress} ${isComplete && s.details__progress_complete}`}
         ></progress>
         <div className={s.progressBar__detalik}>
-          <p className={s.details__collect}>
+          <p className={s.details__collect_1}>
             {' '}
             <span>
-              <strong>{formattedValue} грн </strong>
+              <strong>{formattedValue} UAH </strong>
             </span>
           </p>
           <p className={s.progressBar__text}>
@@ -46,7 +46,7 @@ export const ProgressBar = () => {
             {' '}
             <span className={s.details__total}>
               <strong className={s.details__total}>
-                {formattedMaxProgress} грн
+                {formattedMaxProgress} UAH
               </strong>
             </span>
           </p>
