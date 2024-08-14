@@ -14,7 +14,7 @@ export const Header = () => {
     { text: 'Мета', sectionId: '1' },
     { text: 'Про бригаду', sectionId: '2' },
     { text: 'Чому це важливо', sectionId: '3' },
-    { text: 'Як це працює?', sectionId: '4' }
+    { text: 'Як це працює', sectionId: '4' }
   ];
 
   const handleButtonClick = (sectionId) => {

@@ -5,7 +5,7 @@
 	background: transparent;
 	z-index: 100;
 	font-family: var(--second-family);
-	color: #F4F4F4;
+	color: #f4f4f4;
 
 	&__wrapper {
 		margin: 0 auto;
@@ -19,7 +19,7 @@
 		background: var(--background-black);
 	}
 }
-  
+
 .logo {
 	&__wrapper {
 		height: 50px;
@@ -33,11 +33,11 @@
 		cursor: pointer;
 	}
 }
-  
-.nav{
+
+.nav {
 	position: fixed;
 	height: fit-content;
-	background-color:rgb(37 36 42 / 75%);
+	background-color: rgb(37 36 42 / 75%);
 	z-index: 102;
 	top: 0;
 	padding: 30px 25px 40px 45px;
@@ -46,32 +46,32 @@
 	transition: right 0.3s;
 
 	&__list {
-    display: flex;
-    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 		align-items: end;
-    padding: 0;
+		padding: 0;
 	}
 
 	&__item {
-    padding: 10px 5px;
-    list-style: none;
-  }
+		padding: 10px 5px;
+		list-style: none;
+	}
 	
 	&__href {
-    font-family: var(--second-family);
+		font-family: var(--second-family);
 		font-weight: 400;
 		font-size: 16px;
-    font-style: normal;
-    line-height: 120%;
-    cursor: pointer;
-    transition: text-shadow 3s;
-  }
+		font-style: normal;
+		line-height: 120%;
+		cursor: pointer;
+		transition: text-shadow 3s;
+	}
 
 	&.active {
 		right: 0;
 	}
 }
-  
+
 .burger_menu_blur {
 	position: fixed;
 	background: rgb(0 0 0 / 18%);
@@ -115,12 +115,12 @@
 		}
 	}
 
-	.nav{
+	.nav {
 		&__item {
 			padding: 20px 15px;
 			list-style: none;
 		}
-		
+
 		&__href {
 			font-size: 36px;
 		}
@@ -133,12 +133,12 @@
 }
 
 @media (width >= 1024px) {
-	.header {	
+	.header {
 		&__wrapper {
-			padding: 50px 90px ;
+			padding: 50px 90px;
 			justify-content: start;
 		}
-	
+
 		&.scrolled {
 			background: var(--background-black);
 		}
@@ -151,7 +151,7 @@
 		}
 	}
 
-	.nav{
+	.nav {
 		background-color: inherit;
 		position: static;
 		z-index: inherit;
@@ -168,12 +168,13 @@
 		&__item {
 			padding: 10px 5px;
 		}
-		
+
 		&__href {
 			font-size: 24px;
+			transition: color 0.3s ease 0s;
 
 			&:hover {
-				text-decoration: underline;
+				color:var(--hover);
 			}
 
 			&:active {
@@ -189,14 +190,14 @@
 }
 
 @media (width >= 1680px) {
-	.header {	
+	.header {
 		&__wrapper {
-			padding: 50px 0 ;
+			padding: 50px 0;
 			max-width: 1569px;
 		}
 	}
 
-	.nav{
+	.nav {
 		padding-left: 200px;
 
 		&__list {
