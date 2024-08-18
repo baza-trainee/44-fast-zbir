@@ -20,4 +20,8 @@
     &.animate {
         animation: bounce 0.5s;
     }
+
+    img{
+        width: calc(30px + (75 - 20) * ((100vw - 320px) / (1920 - 350)));
+    }
 }
