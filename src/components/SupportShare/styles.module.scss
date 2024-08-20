@@ -1,4 +1,4 @@
-@import '../../styles/common';
+@import "../../styles/common";
 
 .SupportShare {
   font-family: var(--font-family);
@@ -28,25 +28,27 @@
     font-weight: 700;
     line-height: 49px;
     width: 350px;
+    letter-spacing: 1px;
     position: relative;
     margin: 0 auto 60px;
 
     &::after {
-      content: '';
-      background-image: url('../../assets/share/Vector.svg');
+      content: "";
+      background-image: url("../../assets/share/Vector.svg");
       position: absolute;
       width: 109px;
       height: 141px;
       top: 44%;
-      right: -2%;
+      right: 2%;
       background-repeat: no-repeat;
+      transform: scaleX(0.85);
     }
 
     span {
       display: inline-block;
       color: #fc0;
       width: 350px;
-      letter-spacing: -1px;
+      letter-spacing: -2px;
     }
 
     @media screen and (width >= 1024px) {
@@ -62,8 +64,8 @@
       }
 
       &::after {
-        content: '';
-        background-image: url('../../assets/share/Vectortab.svg');
+        content: "";
+        background-image: url("../../assets/share/Vectortab.svg");
         width: 346px;
         height: 161px;
         left: 11%;
@@ -84,8 +86,8 @@
       }
 
       &::after {
-        content: '';
-        background-image: url('../../assets/share/Vectordesk.svg');
+        content: "";
+        background-image: url("../../assets/share/Vectordesk.svg");
         width: 383px;
         height: 163px;
         left: 97%;
