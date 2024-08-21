@@ -7,7 +7,7 @@ import x from '../../assets/modal/svg/X.svg';
 
 const ThankYouModal = ({ onClose }) => {
   const handleClick = () => {
-    window.location.href = 'https://www.example.com'; // Замінити на потрібне посилання
+    window.location.href = 'https://zbir-44-brigada.vercel.app/'; // Замінити на потрібне посилання
   };
 
   return (
