@@ -16,14 +16,16 @@ const ThankYouModal = ({ onClose }) => {
         <button className={s.closeButton} onClick={onClose}>
           <img src={x} alt="Close" />
         </button>
-        <h1 className={s.header}>ДЯКУЄМО ЗА ТВІЙ ДОНАТ!</h1>
+        <h1 className={s.header}>
+          ДЯКУЄМО ЗА <span>ТВІЙ ДОНАТ!</span>
+        </h1>
         <div className={s.icon}>
           <img src={heart} alt="Heart" />
         </div>
         <p className={s.description}>
           Кожен твій донат допомагає нищити ворогів і наближати нашу Перемогу!
         </p>
-        <h2 className={s.subtitle}>Слава Україні! Героям Слава</h2>
+        <h2 className={s.subtitle}>Слава Україні! Героям Слава!</h2>
         <div className={s.buttonContainer}>
           <Button
             text="НА ГОЛОВНУ"
