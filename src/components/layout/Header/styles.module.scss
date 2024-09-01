@@ -1,5 +1,5 @@
 .header {
-	position: fixed;
+	// position: fixed;
 	width: 100%;
 	top: 0;
 	background: transparent;
@@ -15,9 +15,6 @@
 		justify-content: space-between;
 	}
 
-	&.scrolled {
-		background: var(--background-black);
-	}
 }
 
 .logo {
@@ -137,10 +134,6 @@
 		&__wrapper {
 			padding: 50px 90px;
 			justify-content: start;
-		}
-
-		&.scrolled {
-			background: var(--background-black);
 		}
 	}
 
