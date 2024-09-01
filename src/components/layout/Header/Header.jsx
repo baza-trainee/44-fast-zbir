@@ -7,7 +7,7 @@ import s from './styles.module.scss';
 
 export const Header = () => {
   const [active, setActive] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
   // const scrollRef = useRef(null);
 
   const links = [
@@ -37,25 +37,25 @@ export const Header = () => {
       }
     };
 
-    const onScroll = () => {
-      if (window.scrollY > 1) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    // const onScroll = () => {
+    //   if (window.scrollY > 1) {
+    //     setScrolled(true);
+    //   } else {
+    //     setScrolled(false);
+    //   }
+    // };
 
-    window.addEventListener('scroll', onScroll);
+    // window.addEventListener('scroll', onScroll);
     document.body.addEventListener('keyup', (event) => closeModal(event));
 
     return () => {
       window.removeEventListener('keyup', closeModal);
-      window.removeEventListener('scroll', onScroll);
+      // window.removeEventListener('scroll', onScroll);
     };
   }, []);
 
   return (
-    <header className={clsx(s.header, { [s.scrolled]: scrolled })}>
+    <header className={s.header}>
       <div className={s.header__wrapper}>
         <div className={s.logo__wrapper} onClick={() => handleButtonClick('#')}>
           <img className={s.logo__img} src={Logo} alt="logo" />
